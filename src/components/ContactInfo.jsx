@@ -3,7 +3,7 @@ import React from "react";
 function Contactinfo(){
 
     return(
-   <div className="w-full lg:w-3/4 lg:mx-auto p-3 flex flex-col lg:relative lg:top-20">
+   <div className="w-full md:w-1/2 lg:w-3/4 md:mx-auto p-3 flex flex-col mb-36 relative top-20">
        <h1 className="mb-3 text-3xl">Basic Info.</h1>
        <form className="lg:grid lg:grid-cols-2 flex flex-col gap-4 p-2 bg-gray-200/50 rounded" action="">
          <div className="flex flex-col gap-2 text-xl">
