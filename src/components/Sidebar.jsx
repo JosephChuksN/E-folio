@@ -6,7 +6,7 @@ function Sidebar(){
     const  sideBarItems = [
         {
             name: "Contact Info.",
-            icon: "contact"
+            icon: "person-circle-outline"
         },
         {
             name: "Experience",
@@ -31,7 +31,7 @@ function Sidebar(){
 
 
 return(
-     <nav className="lg:fixed lg:h-20 w-full lg:z-20  ">
+     <nav className="lg:fixed lg:h-20 w-full lg:z-40  ">
 <div className="">
 <div className=" flex justify-between p-5  w-full shadow-sm shadow-gray-500/50">
         
