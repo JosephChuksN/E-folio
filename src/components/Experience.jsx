@@ -6,6 +6,7 @@ function NewExperience(){
         {id: 1, occupation: " ", company: " ", summary: " " }
     ])
 
+    
    const addInputs = () => {
       setInputSpace([...inputSpace, {occupation: " ", company: " ", summary: " " }])
       console.log('done')
@@ -18,13 +19,13 @@ function NewExperience(){
    }
 
 return(
-    <section className="lg:w-3/4 mx-auto  ">
-    <div className="w-full p-3 flex flex-col  md:w-3/4 md:mx-auto shadow relative top-40 ">
+   
+    <div className="w-full p-3 flex flex-col lg:w-1/2  md:w-3/4 md:mx-auto shadow relative top-40 ">
           <h1 className="mb-3 text-3xl p-2 rounded bg-blue-700 text-gray-100">Experience</h1>
        <div>
        {
             inputSpace.map((inputs) => (
-                <form key={inputs.id} className="flex flex-col gap-4 p-2 bg-gray-200/50 rounded mb-10 " action="">
+                <form key={inputs.id} className="flex flex-col gap-4 p-2 bg-slate-200 rounded mb-10 " action="">
            
                    
                         <div className="lg:grid lg:grid-cols-2 gap-5" >
@@ -64,14 +65,14 @@ return(
  ) )
            }
        </div>
-        <div className="flex gap-7 z-[30]">
-        <span onClick={addInputs} className="text-blue-800/50 text-3xl  cursor-pointer "><ion-icon name="add-circle-outline"></ion-icon></span>
-        <span onClick={removeInput} className={`text-blue-800/50 text-3xl  ${inputSpace.length <= 1 ? "hidden" : "block" }`}><ion-icon name="remove-circle-outline"></ion-icon></span>
+        <div className="flex gap-7 z-[10]">
+        <span onClick={addInputs} className="text-blue-800 text-3xl  cursor-pointer "><ion-icon name="add-circle-outline"></ion-icon></span>
+        <span onClick={removeInput} className={`text-blue-800 text-3xl  ${inputSpace.length <= 1 ? "hidden" : "block" }`}><ion-icon name="remove-circle-outline"></ion-icon></span>
         </div>
         
         <div className=" items-start  flex"> <span className=" h-fit mt-8   p-2 w-1/4 text-xl text-center rounded bg-blue-700 text-gray-50" href=" ">Next</span></div>
     </div>
-    </section>
+   
 )
 
 

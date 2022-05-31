@@ -31,6 +31,14 @@ function Sidebar(){
         },
        
     ]
+    const headers = [
+        
+        {
+            id: 1,
+            name: "moon"
+        }
+       
+    ]
 
     const handleShow = ()=>{
         setShowSideBar(show => !show)
@@ -40,25 +48,35 @@ function Sidebar(){
 
 
 return(
-     <nav className="fixed lg:h-20 w-full z-20 ">
+     <nav className="fixed bg-slate-200 lg:h-20 w-full z-20 ">
 
-<div className=" flex justify-between p-5  w-full shadow-sm shadow-gray-500/50">
+<div className=" flex justify-between p-5  w-full ">
         
-        <h1 className="text-2xl font-bold text-blue-700 ">MyResume</h1>
+        <h1 className="text-3xl  font-bold text-blue-700 ">MyResume</h1>
+        <ul className="text-2xl text-black-600 gap-5 lg:inline-flex  my-auto hidden ">{
+          headers.map((lists) => {
+              return(
+            <li key={lists.id} className=" p-2 rounded-full hover:bg-slate-300"><span className=""><ion-icon name={lists.name}></ion-icon></span></li>
+              )
+          })
+          
+          }</ul>
         <span className={`text-4xl text-blue-600 absolute right-2 lg:hidden`} onClick={handleShow}><ion-icon name="menu"></ion-icon></span>
     </div>
-         <div className={`lg:static lg:z-[-100] lg:mt-[-0.5]  lg:w-64  p-4  absolute bg-gray-50 h-screen top-0 z-100 w-3/4 md:w-64 shadow shadow-gray-900/50 ${showSideBar? "left-0" : "left-[-690px]"} transition-all ease-in duration-300 `}>
+         <div className={`lg:static bg-slate-200 lg:z-[-100] lg:mt-[-8px]  lg:w-64  p-4  absolute  h-screen top-0 z-100 w-3/4 md:w-64  ${showSideBar? "left-0" : "left-[-690px]"} transition-all ease-in duration-300 `}>
          
          <div className=" mb-10  lg:hidden">
              <span className="text-3xl font-bold text-red-800 absolute right-2 top-2 " onClick={handleShow}><ion-icon name="close"></ion-icon></span>
          </div>
-             <ul className="mt-10">{
+             <ul className="mt-20">{
               sideBarItems.map((lists)=>{
                   return(
-                     <Link key={lists.id} to={lists.link}> <li onClick={handleShow} key={`${lists.id}_{lists.name}`} className="text-xl my-5 ml-4  p-2 hover:bg-gray-200/50"><span className="mr-4"><ion-icon name={lists.icon} ></ion-icon></span>{lists.name}</li></Link>
+                     <Link key={lists.id} to={lists.link}> <li onClick={handleShow} key={`${lists.id}_{lists.name}`} className="my-10 text-blue-800 border rounded border-blue-800 hover:bg-blue-800/20 text-xl p-3"><span className="mr-4 text-2xl"><ion-icon name={lists.icon} ></ion-icon></span>{lists.name}</li></Link>
                   )
               })      
                  }</ul>
+
+                 <div className="text-center mt-20"><span className="text-[0.8rem] bg-gray-900/80 text-gray-100 lg:hidden p-2 rounded "><ion-icon name="moon"></ion-icon> Dark Mode</span></div>
          </div>
 
           
