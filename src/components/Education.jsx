@@ -1,14 +1,18 @@
-import { React, useState } from "react"
+import { React, useState } from "react";
 
-function NewExperience(){
+
+function Education(){
+
+    
+
 
     const [inputSpace, setInputSpace] = useState([
-        {id: 1, occupation: " ", company: " ", summary: " " }
+        {id: 1, institute: " ", major: " ", degree: " " }
     ])
 
     
    const addInputs = () => {
-      setInputSpace([...inputSpace, {occupation: " ", company: " ", summary: " " }])
+      setInputSpace([...inputSpace, {institute: " ", major: " ", degree: " " }])
       console.log('done')
    }
    const removeInput = () => {
@@ -21,7 +25,7 @@ function NewExperience(){
 return(
    
     <div className="w-full lg:translate-x-12 p-3  flex flex-col lg:w-1/2  md:w-3/4 md:mx-auto shadow relative top-40 ">
-          <h1 className="mb-3 text-3xl p-2 rounded bg-blue-700 text-gray-100">Experience</h1>
+          <h1 className="mb-3 text-3xl p-2 rounded bg-blue-700 text-gray-100">Education</h1>
        <div>
        {
             inputSpace.map((inputs) => (
@@ -30,41 +34,51 @@ return(
                    
                         <div className="lg:grid lg:grid-cols-2 gap-5" >
                             <div className="flex flex-col gap-2 text-xl">
-                        <label htmlFor="occupation">Occupation/Title</label>
+                        <label htmlFor="Institute">Institute / School</label>
                         <input className="border p-2 border-blue-800/50 rounded" 
                         type="text" 
-                        name="occupation" 
-                        id="occupation" 
+                        name="Institute" 
+                        id="Institute" 
                       
                         />
                     </div>
                     <div className="flex flex-col gap-2 text-xl">
-                        <label htmlFor="company">Company</label>
+                        <label htmlFor="company">Major / Department</label>
                         <input className="border p-2 border-blue-800/50 rounded" 
                         type="text" 
-                        name="company" 
-                        id="company"
+                        name="major" 
+                        id="major"
                         
                          />
                     </div>
                     <div className="flex flex-col gap-2 text-xl">
-                        <label htmlFor="">Summary</label>
+                        <label htmlFor="">Degree</label>
+                        <input className="border p-2 border-blue-800/50 rounded" 
+                        type="text" 
+                        name="degree" 
+                        id="degree"
+                        
+                         /> 
+                       
+                       
+                      
+                    </div>
+                    
+                        </div>  
+            </form>
+ ) )
+           }
+           <div className="flex flex-col gap-2 text-xl mb-2">
+                        <label htmlFor="skills">Qualifications/Skills</label>
                        <textarea className="border p-2 border-blue-800/50 rounded" 
-                        name="summary" 
-                        id="summary" 
+                        name="skills" 
+                        id="skills" 
                         
                        
                        />
                     </div>
-                        </div>
-                    
-                
-                 
-                   
-            </form>
- ) )
-           }
        </div>
+       
         <div className="flex gap-7 z-[10]">
         <span onClick={addInputs} className="text-blue-800 text-xl  cursor-pointer "><ion-icon name="add-circle-outline"></ion-icon> Add</span>
         <span onClick={removeInput} className={`text-red-900 text-xl  ${inputSpace.length <= 1 ? "hidden" : "block" }`}><ion-icon name="remove-circle-outline"></ion-icon> Delete</span>
@@ -79,4 +93,4 @@ return(
 
 
 }
-export default NewExperience;
+export default Education;

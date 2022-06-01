@@ -21,7 +21,7 @@ function Sidebar(){
             id: 3,
             name: "Education",
             icon: "school",
-            link: " "
+            link: "/education"
         },
         {
             id: 4,
@@ -45,8 +45,14 @@ function Sidebar(){
         console.log('worked')
     }
     const [showSideBar, setShowSideBar] = useState(false)
-
-
+ const [showDarkMode, setShowDarkMode] = useState(false)
+const   handleShowDarkModeDiv = () =>{
+      setShowDarkMode(true)
+      console.log("done")
+  } 
+const handleHideShowDarkModeDiv = () => {
+    setShowDarkMode(false)
+}
 return(
      <nav className="fixed bg-slate-200 lg:h-20 w-full z-20 ">
 
@@ -56,12 +62,13 @@ return(
         <ul className="text-2xl text-black-600 gap-5 lg:inline-flex  my-auto hidden ">{
           headers.map((lists) => {
               return(
-            <li key={lists.id} className=" p-2 rounded-full hover:bg-slate-300"><span className=""><ion-icon name={lists.name}></ion-icon></span></li>
+            <li key={lists.id} className=" p-2 rounded-full hover:bg-slate-300"><span onMouseOut={handleHideShowDarkModeDiv}  onMouseOver={handleShowDarkModeDiv} className=""><ion-icon name={lists.name}></ion-icon></span></li>
               )
           })
           
           }</ul>
-        <span className={`text-4xl text-blue-600 absolute right-2 lg:hidden`} onClick={handleShow}><ion-icon name="menu"></ion-icon></span>
+        <span  className={`text-4xl text-blue-600 absolute right-2 lg:hidden`} onClick={handleShow}><ion-icon name="menu"></ion-icon></span>
+        <span className={`absolute text-[0.8rem] bg-gray-900/80 rounded ${showDarkMode ? "block" : "hidden "}  right-20 top-5 p-1 text-gray-100`}>Dark mode</span>
     </div>
          <div className={`lg:static bg-slate-200 lg:z-[-100] lg:mt-[-8px]  lg:w-64  p-4  absolute  h-screen top-0 z-100 w-3/4 md:w-64  ${showSideBar? "left-0" : "left-[-690px]"} transition-all ease-in duration-300 `}>
          

@@ -5,7 +5,7 @@ function Contactinfo(){
 
     return(
         
-   <div className="w-full lg:w-1/2 md:w-3/4 md:mx-auto p-3  shadow flex flex-col relative top-40 ">
+   <div className="w-full lg:translate-x-12 lg:w-1/2 md:w-3/4 md:mx-auto p-3  shadow flex flex-col relative top-40 ">
        <h1 className="mb-3 text-3xl p-2 bg-blue-700 text-gray-100 rounded">Basic Info.</h1>
 
        <form className=" flex flex-col gap-4 p-2 bg-slate-200 rounded" action="">
