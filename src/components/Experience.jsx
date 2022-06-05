@@ -20,7 +20,7 @@ function NewExperience(){
 
 return(
    
-    <div className="w-full lg:translate-x-12 p-3  flex flex-col lg:w-1/2  md:w-3/4 md:mx-auto shadow relative top-40 ">
+    <div className="w-full lg:translate-x-12 p-3  flex flex-col lg:w-[80%]   md:w-3/4 md:mx-auto lg:ml-[17rem]  relative top-40 ">
           <h1 className="mb-3 text-3xl p-2 rounded bg-blue-700 text-gray-100">Experience</h1>
        <div>
        {

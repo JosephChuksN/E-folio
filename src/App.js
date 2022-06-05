@@ -1,25 +1,25 @@
-import Sidebar from './components/Sidebar';
-import Contactinfo from './components/ContactInfo';
-import NewExperience from './components/Experience';
-import Education from './components/Education';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Sidebar from './components/Sidebar'
+import Appbar from './components/Appbar'
+import Profile from './components/Profile'
+import { AppProvider } from './myContext/Context';
 import './App.css';
 
 function App() {
+
   return (
-    <Router>
-    <div className="">
-    <Sidebar />
-     <Routes>
     
-     <Route path='/' element={<Contactinfo />}/>
-     <Route path='/experience' element={<NewExperience />}/>
-     <Route path='/education' element={<Education />}/>
-     
-     </Routes>
-     
+    <div className='lg:flex h-screen '>
+      <AppProvider>
+<Sidebar />
+    <div className='lg:w-[80%] lg:ml-[307px]'>
+     <Appbar />
+    <main className=' z-10'>
+    <Profile />
+    </main>
     </div>
-    </Router>
+    </AppProvider>
+  </div>
+  
   );
 }
 
