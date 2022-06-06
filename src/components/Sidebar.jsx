@@ -1,4 +1,5 @@
 import { React, useContext } from "react";
+import { Link } from "react-router-dom";
 import AppContext from "../myContext/Context";
 
 
@@ -21,18 +22,24 @@ function Sidebar(){
     const sideBarItemsSub =[
         {
             id: 1,
-            name: "Education",
+            name: "About",
             icon: "school",
-            link: "/experience"
+            link: "/About"
         },
         {
             id: 2,
-            name: "Experience",
-            icon: "briefcase",
+            name: "Education",
+            icon: "school",
             link: "/education"
         },
         {
             id: 3,
+            name: "Experience",
+            icon: "briefcase",
+            link: "/experience"
+        },
+        {
+            id: 4,
             name: "Skills",
             icon: "cog",
             link: " "
@@ -51,7 +58,7 @@ return(
  <ul className=" mx-2">{
         sideBarItems.map((lists)=>{
             return(
-   <li onClick={closeSidebar}  key={`${lists.id}_{lists.name}`} className=" hover:bg-slate-900/50 text-gray-100 rounded-xl    text-xl p-3"><span className="mr-4 text-2xl"><ion-icon name={lists.icon} ></ion-icon></span>{lists.name}</li>
+   <Link key={lists.id} to={lists.link}> <li onClick={closeSidebar}  key={`${lists.id}_{lists.name}`} className=" hover:bg-slate-900/50 text-gray-100 rounded-xl    text-xl p-3"><span className="mr-4 text-2xl"><ion-icon name={lists.icon} ></ion-icon></span>{lists.name}</li></Link>
             )
         })      
            }</ul>
@@ -62,7 +69,7 @@ return(
        <ul className="mx-2">{
         sideBarItemsSub.map((lists)=>{
             return(
-   <li onClick={closeSidebar}   key={`${lists.id}_{lists.name}`} className=" hover:bg-slate-900/50 text-gray-100 rounded-xl  text-xl p-3"><span className="mr-4 text-2xl "><ion-icon name={lists.icon} ></ion-icon></span>{lists.name}</li>
+  <Link  key={lists.id} to={lists.link}><li onClick={closeSidebar}   key={`${lists.id}_{lists.name}`} className=" hover:bg-slate-900/50 text-gray-100 rounded-xl  text-xl p-3"><span className="mr-4 text-2xl "><ion-icon name={lists.icon} ></ion-icon></span>{lists.name}</li></Link>
             )
         })      
            }</ul>
