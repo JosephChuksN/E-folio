@@ -6,10 +6,10 @@ function Profile(){
     return(
         <div className="text-gray-100 ">
             <div className=" text-gray-100  ">
-                <div className="translate-y-32  mb-44 ">
-                    <div className="lg:w-[20%] ml-3 w-1/2  rounded-full h-fit "><img className=" rounded-[10rem] max-w-full h-auto " src="https://picsum.photos/536/354" alt="" /></div>
-                    <span className="lg:pl-5 lg:mt-10 flex flex-col mt-5 pl-10">
-                    <h1 className="text-xl">Nwosu Joseph</h1>
+                <div className="translate-y-20 lg:mt-3  mb-28 ">
+                    <div className="mx-3"><img className="lg:w-40 lg:h-40 w-32 h-32 rounded-full " src="https://picsum.photos/536/354" alt="" /></div>
+                    <span className=" flex flex-col mt-5 pl-3">
+                    <h1 className="text-xl font-bold">Nwosu Joseph</h1>
                     <h1 className="text-slate-400">I'm a web developer</h1>
                     </span>
                 </div>
