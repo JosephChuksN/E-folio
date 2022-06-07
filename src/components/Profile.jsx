@@ -5,9 +5,9 @@ function Profile(){
      const {aboutText} =useContext(AppContext)
     return(
         <div className="text-gray-100 ">
-            <div className="h-40 bg-blue-400  text-gray-100  ">
-                <div className="translate-y-32 lg:flex mb-44 lg:w-96">
-                    <img className="w-40 ml-10 rounded-[70%] " src="https://picsum.photos/536/354" alt="" />
+            <div className=" text-gray-100  ">
+                <div className="translate-y-32  mb-44 ">
+                    <div className="lg:w-[20%] ml-3 w-1/2  rounded-full h-fit "><img className=" rounded-[10rem] max-w-full h-auto " src="https://picsum.photos/536/354" alt="" /></div>
                     <span className="lg:pl-5 lg:mt-10 flex flex-col mt-5 pl-10">
                     <h1 className="text-xl">Nwosu Joseph</h1>
                     <h1 className="text-slate-400">I'm a web developer</h1>

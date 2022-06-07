@@ -66,7 +66,7 @@ return(
                <span className="pl-10">Edit</span>
            </div>
        
-       <ul className="mx-2">{
+       <ul className="mx-2 flex flex-col space-y-2">{
         sideBarItemsSub.map((lists)=>{
             return(
   <Link  key={lists.id} to={lists.link}><li onClick={closeSidebar}   key={`${lists.id}_{lists.name}`} className=" hover:bg-slate-900/50 text-gray-100 rounded-xl  text-xl p-3"><span className="mr-4 text-2xl "><ion-icon name={lists.icon} ></ion-icon></span>{lists.name}</li></Link>
