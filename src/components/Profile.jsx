@@ -6,7 +6,7 @@ function Profile(){
     return(
         <div className="text-gray-100 ">
             <div className=" text-gray-100  ">
-                <div className="translate-y-20 lg:mt-3  mb-28 ">
+                <div className="translate-y-20   mb-28 ">
                     <div className="mx-3"><img className="lg:w-40 lg:h-40 w-32 h-32 rounded-full " src="https://picsum.photos/536/354" alt="" /></div>
                     <span className=" flex flex-col mt-5 pl-3">
                     <h1 className="text-xl font-bold">Nwosu Joseph</h1>
@@ -18,7 +18,7 @@ function Profile(){
                 <div className="text-gray-100  p-3">
                  <h1 className="text-2xl mb-3">About</h1>
                  <span>
-                <p>{aboutText.textArea}</p>
+                <p className="justify-center">{aboutText.textArea}</p>
                  </span>
                </div>
                     <div  className="text-gray-100  p-3">
@@ -31,14 +31,14 @@ function Profile(){
                     </div>
                     <div className="p-3">
             <h1 className="text-2xl mb-3">Education</h1>
-            <div className="rounded-md shadow shadow-slate-400">
-                <div className="flex items-center lg:gap-5 p-3 gap-1 lg:p-5 rounded-md">
+            <div className="">
+                <div className="flex flex-col  lg:gap-5  gap-1  rounded-md">
                <div className="flex gap-2 items-center ">
-               <div className="rounded-full px-2 py-1 text-gray-900 bg-blue-400">U</div>
-               <h1>Unimaid</h1>
+               <div className="rounded-full py-1 text-gray-900 bg-blue-400 w-10 h-10 flex justify-center"><span className=" text-xl">U</span></div>
+               <h1>University of Maiduguri</h1>
                </div>
-               <span className="flex items-center"><ion-icon name="calendar"></ion-icon> <p>2022-10-20 - 2022-10-20</p></span>
-               <h1>Bsc.</h1>
+               <span className="flex items-center"><ion-icon name="calendar"></ion-icon>  <p>2022-10-20   -   2022-10-20</p></span>
+               <h1 className="text-xl">Bsc.</h1>
                 </div>
             </div>
         </div>

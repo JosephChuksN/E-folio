@@ -23,7 +23,7 @@ function Sidebar(){
         {
             id: 1,
             name: "About",
-            icon: "school",
+            icon: "information-circle-outline",
             link: "/About"
         },
         {

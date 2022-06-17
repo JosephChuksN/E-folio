@@ -8,7 +8,7 @@ const AppProvider = ({ children }) =>{
  
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [aboutText, setAboutText] = useState({
-      textArea: ` A web developer with 3 years of experience in frontend developer 
+      textArea: `A web developer with 3 years of experience in frontend developer 
     and a graduate of the University of maiduguri, based in Abuja Nigeria, 
     I am an enthusiast in learning new technologies relating to web development 
     always curious about solving problems relating to my field. 

@@ -15,6 +15,7 @@ function About(){
       id="" 
       cols="30" 
       rows="10" 
+      onChange={handleChange}
       
       
       
@@ -22,7 +23,7 @@ function About(){
       />
       <div className="grid grid-cols-2 gap-5 lg:w-72 ">
           <button className="p-2 bg-slate-400/50 rounded hover:bg-slate-400 ">Cancel</button>
-          <button onClick={handleChange} className="p-2 bg-blue-400 rounded hover:bg-blue-500">Save</button>
+          <button  className="p-2 bg-blue-400 rounded hover:bg-blue-500">Save</button>
       </div>
   </div>
     )
