@@ -16,13 +16,13 @@ function Profile(){
 
                 <div className="md:grid grid-cols-2 md:gap-5 border-t mx-2 border-slate-600">
                 <div className="text-gray-100  p-3">
-                 <h1 className="text-2xl mb-3">About</h1>
+                 <h1 className="text-2xl mb-3 font-bold">About</h1>
                  <span>
                 <p className="justify-center">{aboutText.textArea}</p>
                  </span>
                </div>
                     <div  className="text-gray-100  p-3">
-                        <h1  className="text-2xl mb-3">Location</h1>
+                        <h1  className="text-2xl mb-3 font-bold">Location</h1>
                         <span className="flex flex-col">
                             <p className="text-xl ">Abuja, Nigeria</p>
                             <p className="pt-5 text-blue-400">Portfolio</p>
@@ -30,11 +30,11 @@ function Profile(){
                         </span>
                     </div>
                     <div className="p-3">
-            <h1 className="text-2xl mb-3">Education</h1>
+            <h1 className="text-2xl mb-3 font-bold">Education</h1>
             <div className="">
-                <div className="flex flex-col  lg:gap-5  gap-1  rounded-md">
+                <div className="flex flex-col  lg:gap-3  gap-1  rounded-md">
                <div className="flex gap-2 items-center ">
-               <div className="rounded-full py-1 text-gray-900 bg-blue-400 w-10 h-10 flex justify-center"><span className=" text-xl">U</span></div>
+      
                <h1>University of Maiduguri</h1>
                </div>
                <span className="flex items-center"><ion-icon name="calendar"></ion-icon>  <p>2022-10-20   -   2022-10-20</p></span>

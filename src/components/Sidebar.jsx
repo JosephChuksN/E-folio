@@ -30,7 +30,7 @@ function Sidebar(){
             id: 2,
             name: "Education",
             icon: "school",
-            link: "/education"
+            link: "/Education"
         },
         {
             id: 3,
