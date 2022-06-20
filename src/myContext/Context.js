@@ -11,6 +11,14 @@ const AppProvider = ({ children }) =>{
       textArea: "A web developer with 3 years of experience in frontend developer  and a graduate of the University of maiduguri, based in Abuja Nigeria,  I am an enthusiast in learning new technologies relating to web development  always curious about solving problems relating to my field.  You will find me watching football matches and spending time with family when not coding."
      ,
     })
+    const [educationData, setEducationData] = useState([
+      {
+        institute: "University of Maiduguri",
+        degree: "BSc.",
+        startDate: "",
+        endDate: "",
+      }
+    ])
     
   const openSidebar = () => {
     setIsSidebarOpen(true);
@@ -26,14 +34,34 @@ const AppProvider = ({ children }) =>{
       [name] : value
     }))
   }
+
+  const handleEducationData = () => {
+    educationData.push({
+      institute: "",
+        degree: "",
+        startDate: "",
+        endDate: "",
+    })
+  }
+    const handleEduDataChange = (event) => {
+const {name, value} = event.target
+      setEducationData(educData => ({
+        ...educData, [name] : value
+        
+      }))
+    }
+  
   return(
    <AppContext.Provider
    value={{
        isSidebarOpen,
        aboutText,
+       educationData,
        openSidebar,
        closeSidebar,
        handleChange,
+       handleEducationData,
+       handleEduDataChange,
        
    }}
    >

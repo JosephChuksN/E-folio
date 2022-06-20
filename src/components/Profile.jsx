@@ -2,7 +2,7 @@ import { React, useContext } from "react";
 import AppContext from "../myContext/Context";
 
 function Profile(){
-     const {aboutText} =useContext(AppContext)
+     const {aboutText, educationData} =useContext(AppContext)
     return(
         <div className="text-gray-100 ">
             <div className=" text-gray-100  ">
@@ -31,16 +31,18 @@ function Profile(){
                     </div>
                     <div className="p-3">
             <h1 className="text-2xl mb-3 font-bold">Education</h1>
-            <div className="">
+           {educationData.map((eduData, index) => (
+                <div key={index} className="">
                 <div className="flex flex-col  lg:gap-3  gap-1  rounded-md">
                <div className="flex gap-2 items-center ">
       
-               <h1>University of Maiduguri</h1>
+               <h1>{eduData.institute}</h1>
                </div>
                <span className="flex items-center"><ion-icon name="calendar"></ion-icon>  <p>2022-10-20   -   2022-10-20</p></span>
-               <h1 className="text-xl">Bsc.</h1>
+               <h1 className="text-xl">{eduData.degree}</h1>
                 </div>
             </div>
+           ))}
         </div>
                 </div>
                
