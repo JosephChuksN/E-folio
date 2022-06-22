@@ -15,8 +15,8 @@ const AppProvider = ({ children }) =>{
       {
         institute: "University of Maiduguri",
         degree: "BSc.",
-        startDate: "",
-        endDate: "",
+        startDate: "2020-10-11",
+        endDate: "2020-10-13",
       }
     ])
     
@@ -43,12 +43,12 @@ const AppProvider = ({ children }) =>{
         endDate: "",
     })
   }
-    const handleEduDataChange = (event) => {
-const {name, value} = event.target
-      setEducationData(educData => ({
-        ...educData, [name] : value
-        
-      }))
+    const handleEduDataChange = (index, event) => {
+      const inputValues = [...educationData]
+ 
+inputValues[index][event.target.name] = [event.target.value]
+      setEducationData(inputValues)
+      
     }
   
   return(

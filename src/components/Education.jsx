@@ -7,7 +7,8 @@ function Education(){
    <div className="text-gray-100 translate-y-20 px-3   pt-36">
        <div className="lg:w-1/2 lg:p-5 p-2 rounded bg-slate-300/10">
           <div><span  className="flex justify-end text-2xl"><ion-icon  name="close"></ion-icon></span></div>
-          {educationData.map((eduData, index) =>  (
+          {educationData.map((eduData, index) =>  {
+            return(
            <div key={index} className="flex flex-col gap-5 ">
                 <div className="flex flex-col">
              <label htmlFor="">Institute/School</label>
@@ -16,7 +17,7 @@ function Education(){
            name="institute" 
            value={eduData.institute}
            id=""
-           onChange={handleEduDataChange}
+           onChange={event => handleEduDataChange(index, event)}
            
            />
           </div>
@@ -27,7 +28,7 @@ function Education(){
             name="degree" 
             value={eduData.degree}
             id=""
-            onChange={handleEduDataChange}
+            onChange={event => handleEduDataChange(index, event)}
             />
           </div>
 
@@ -39,7 +40,7 @@ function Education(){
                name="startDate" 
                value={eduData.startDate}
                id=""
-               onChange={handleEduDataChange}
+               onChange={event => handleEduDataChange(index, event)}
              
              />
              </div>
@@ -51,14 +52,14 @@ function Education(){
                name="endDate" 
                value={eduData.endDate}
                id=""
-               onChange={handleEduDataChange}
+               onChange={event => handleEduDataChange(index, event)}
              
              
              />
              </div>
             </div>
            </div>
-          ))}
+ )})}
             <div className="flex justify-end"><button className="p-1 mt-5 rounded bg-blue-400 w-20 text-xl">Save</button></div>
        </div>
    </div>

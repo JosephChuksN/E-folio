@@ -38,7 +38,7 @@ function Profile(){
       
                <h1>{eduData.institute}</h1>
                </div>
-               <span className="flex items-center"><ion-icon name="calendar"></ion-icon>  <p>2022-10-20   -   2022-10-20</p></span>
+               <span className="flex items-center"><ion-icon name="calendar"></ion-icon>  <p>{`${eduData.startDate} - ${eduData.endDate}`}</p></span>
                <h1 className="text-xl">{eduData.degree}</h1>
                 </div>
             </div>
