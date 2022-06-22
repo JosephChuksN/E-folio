@@ -13,8 +13,8 @@ const AppProvider = ({ children }) =>{
     })
     const [educationData, setEducationData] = useState([
       {
-        institute: "University of Maiduguri",
-        degree: "BSc.",
+        institute: "UNIMAID",
+        degree: "Anatomy BSc.",
         startDate: "2020-10-11",
         endDate: "2020-10-13",
       }

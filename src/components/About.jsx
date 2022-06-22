@@ -15,6 +15,7 @@ function About(){
       id="" 
       cols="30" 
       rows="10" 
+     maxLength={450}
       onChange={handleChange}
       
       
