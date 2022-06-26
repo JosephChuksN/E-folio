@@ -1,9 +1,8 @@
 import { React, useContext } from "react";  
-import EducationData from "./EducationData";
 import AppContext from "../myContext/Context";
 
 function Profile(){
-     const {aboutText, educationData} =useContext(AppContext)
+     const {aboutText} =useContext(AppContext)
     return(
         <div className="text-gray-100 ">
             <div className=" text-gray-100  ">
@@ -30,7 +29,7 @@ function Profile(){
                            <span className="pt-5 text-purple-400"><a href="https://nwosu-joseph-portfolio.vercel.app/">Nwosu Joseph  <ion-icon name="link"></ion-icon></a></span>
                         </span>
                     </div>
-               <EducationData />
+              
                 </div>
                
             </div>
