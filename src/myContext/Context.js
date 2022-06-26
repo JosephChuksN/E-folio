@@ -43,6 +43,10 @@ const AppProvider = ({ children }) =>{
     setEducationDetails([...educationDetails, {id:uuidv4(), institution, Degree, startDate, endDate}])
   }
 
+  const editEducation = (id, editedEducation) => {
+       setEducationDetails(educationDetails.map(details => (details.id === id? editedEducation : details)))
+  }
+
   const handleChange = (event) => {
     const {name, value} = event.target
     setAboutText(aboutText => ({
@@ -63,6 +67,7 @@ const AppProvider = ({ children }) =>{
        closeSidebar,
        handleChange,
        addNewEdu,
+       editEducation,
       
       
        

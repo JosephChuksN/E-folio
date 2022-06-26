@@ -10,10 +10,19 @@ const [showModal, setShowModal] = useState(false);
 
     return(
   <>
-  <div className='translate-y-44 text-gray-100 lg:w-3/5'>{
+
+  
+<button
+        className="bg-blue-700 lg:mt-24 ml-3 mt-24 text-white active:bg-blue-800 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+        type="button"
+        onClick={() => setShowModal(true)}
+      >
+      Add New Education
+      </button>
+  <div className='mt-20 text-gray-100 lg:w-3/5'>{
     educationDetails.map(data => {
         return(
-            <div className='' key={data.id}>
+            <div className='p-3' key={data.id}>
                 <EducationLayout details={data}  />
             </div>
         )
@@ -21,21 +30,14 @@ const [showModal, setShowModal] = useState(false);
     }</div>
 
 
-<button
-        className="bg-blue-700 lg:translate-y-10 translate-y-3 text-white active:bg-blue-800 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-        type="button"
-        onClick={() => setShowModal(true)}
-      >
-      Add New Education
-      </button>
       {showModal ? (
         <>
           <div
-            className="backdrop-blur-sm  justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+            className="backdrop-blur-sm  justify-center items-center text-gray-100 flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
           >
-            <div className="relative w-full lg:w-3/4 my-6 lg:mx-auto mx-3 shadow-md shadow-slate-500 max-w-3xl">
+            <div className="relative w-full lg:w-3/4 my-6 lg:mx-auto mx-2 shadow-sm shadow-gray-200/50 max-w-3xl">
               {/*content*/}
-              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-neutral-900 outline-none focus:outline-none">
                 {/*header*/}
                 <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
                   <h3 className="text-3xl font-semibold">
@@ -46,7 +48,7 @@ const [showModal, setShowModal] = useState(false);
                 </button>
                 </div>
                 {/*body*/}
-                <div className="relative p-6 flex-auto">
+                <div className="relative lg:p-6 p-4 flex-auto">
                  <AddNewEducation showModal={setShowModal}/>
                 </div>
                 {/*footer*/}

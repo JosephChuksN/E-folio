@@ -23,8 +23,8 @@ function AddNewEducation({showModal}){
     return(
 <form action="" onSubmit={handleAddEducation} className=''>
  <div className='flex flex-col'>
-    <label htmlFor="">Institution</label>
-    <input className='rounded-md'
+    <label htmlFor=""  className='text-xl'>Institution</label>
+    <input className='rounded-md bg-gray-300 text-gray-800'
     type="text" 
     name="institution"
     value={institution} 
@@ -33,8 +33,8 @@ function AddNewEducation({showModal}){
     />
  </div>
  <div  className='flex flex-col'>
-    <label htmlFor="">Course</label>
-    <input  className='rounded-md'
+    <label htmlFor=""  className='text-xl'>Course</label>
+    <input  className='rounded-md bg-gray-300 text-gray-800'
     type="text"
     name="Degree" 
     value={Degree}
@@ -44,8 +44,8 @@ function AddNewEducation({showModal}){
  </div>
  <div className='flex justify-between items-center'>
  <div  className='flex flex-col'>
-    <label htmlFor="">Start Date</label>
-    <input  className='rounded-md'
+    <label htmlFor=""  className='text-xl'>Start Date</label>
+    <input  className='rounded-md bg-gray-300 text-gray-800'
     type="date" 
     name="startDate"
     value={startDate}
@@ -53,10 +53,10 @@ function AddNewEducation({showModal}){
     
     />
  </div>
- <span className='text-xl'>To</span>
+ 
  <div  className='flex flex-col'>
-    <label htmlFor="">End Date</label>
-    <input  className='rounded-md'
+    <label htmlFor=""  className='text-xl'>End Date</label>
+    <input  className='rounded-md bg-gray-300 text-gray-800'
     type="date" 
     name="endDate"
     value={endDate}
@@ -76,7 +76,6 @@ function AddNewEducation({showModal}){
                   <button
                     className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="submit"
-                    onClick={(e) => handleAddEducation}
                   >
                     Add
                   </button>
