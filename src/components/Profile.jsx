@@ -2,7 +2,7 @@ import { React, useContext } from "react";
 import AppContext from "../myContext/Context";
 
 function Profile(){
-     const {aboutText} =useContext(AppContext)
+     const {aboutText,  educationDetails } =useContext(AppContext)
     return(
         <div className="text-gray-100 ">
             <div className=" text-gray-100  ">
@@ -29,7 +29,25 @@ function Profile(){
                            <span className="pt-5 text-purple-400"><a href="https://nwosu-joseph-portfolio.vercel.app/">Nwosu Joseph  <ion-icon name="link"></ion-icon></a></span>
                         </span>
                     </div>
-              
+              <div className="p-3">
+                <h1  className="text-2xl mb-3 font-bold">Education</h1>
+                <div>{ educationDetails.map(data => (
+                    <div className="flex gap-5 justify-between flex-col border-b-4 border-blue-700/50  pb-3">
+                        <div className="flex gap-3 items-center">
+                            <span className="text-xl">Institution:</span>
+                            <span>{data.institution}</span>
+                        </div>
+                       <div  className="flex gap-3 items-center">
+                        <span className="text-xl">Course:</span>
+                        <span>{data.Degree}</span>
+                       </div>
+                      <div  className="flex gap-3 items-center">
+                        <span className="text-xl">Date:</span>
+                        <span>{`${data.startDate} - ${data.endDate}`}</span>
+                      </div>
+                    </div>
+                ))}</div>
+              </div>
                 </div>
                
             </div>

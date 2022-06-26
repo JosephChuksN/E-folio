@@ -1,9 +1,11 @@
-import { React, useState} from 'react'
+import { React, useState, useContext} from 'react'
 import EditEducation from './EditEducation';
+import AppContext from '../../myContext/Context';
 
 
 function EducationLayout({details}){
     const [showModal, setShowModal] = useState(false);
+    const {handleOnDelete} = useContext(AppContext)
 
     return(
       <>
@@ -14,7 +16,7 @@ function EducationLayout({details}){
             <span>{`${details.startDate} - ${details.endDate}`}</span>
           </div>
           <div className='flex gap-5'>
-            <span ><ion-icon name="trash"></ion-icon></span>
+            <span onClick={() => handleOnDelete(details.id)} ><ion-icon name="trash"></ion-icon></span>
             <span onClick={() => setShowModal(true)}><ion-icon name="create"></ion-icon></span>
           </div>
           </div>
@@ -22,7 +24,7 @@ function EducationLayout({details}){
       {showModal ? (
         <>
           <div
-            className="backdrop-blur-sm  justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+            className="backdrop-blur-sm transition-all ease-in-out duration-500 justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
           >
             <div className="relative w-full lg:w-3/4 my-6 lg:mx-auto mx-2 shadow-sm shadow-gray-200/50 max-w-3xl">
               {/*content*/}
@@ -38,7 +40,11 @@ function EducationLayout({details}){
                 </div>
                 {/*body*/}
                 <div className="relative  lg:p-6 p-4 flex-auto">
-                 <EditEducation details={details} />
+                 <EditEducation 
+                 details={details}
+                 showModal={setShowModal}
+                 
+                 />
                 </div>
                 {/*footer*/}
               

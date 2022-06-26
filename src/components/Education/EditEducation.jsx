@@ -1,17 +1,21 @@
-import { prettyDOM } from '@testing-library/react';
 import { React, useContext, useState } from 'react'
 import AppContext from '../../myContext/Context';
 
-function EditEducation({details}){
+function EditEducation({details, showModal}){
 
     const id = details.id;
     const {editEducation} = useContext(AppContext)
 
     const [educationInputValues, setEducationInputValues] = useState(details)
   const {institution, Degree, startDate, endDate} = details
-//    const handleSave = () =>  
+  const editedEducation = { institution, Degree, startDate, endDate}
+   const handleSave = (e) =>  {
+      e.preventDefault()
+      editEducation(id, editedEducation)
+      showModal(false)
+   }
     return(
-<form action="" className='flex flex-col gap-5'>
+<form action="" onSubmit={handleSave} className='flex flex-col gap-5'>
  <div className='flex flex-col'>
     <label htmlFor="" className='text-xl'>Institution</label>
     <input className='rounded-md bg-gray-300 text-gray-800'
@@ -59,7 +63,7 @@ function EditEducation({details}){
                   <button
                     className="text-red-500 background-transparent  uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                   
+                   onClick={() =>showModal(false)}
                   >
                     Cancel
                   </button>

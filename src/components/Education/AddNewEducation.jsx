@@ -21,7 +21,7 @@ function AddNewEducation({showModal}){
     
 
     return(
-<form action="" onSubmit={handleAddEducation} className=''>
+<form action="" onSubmit={handleAddEducation}  className='flex flex-col gap-5'>
  <div className='flex flex-col'>
     <label htmlFor=""  className='text-xl'>Institution</label>
     <input className='rounded-md bg-gray-300 text-gray-800'
@@ -45,7 +45,7 @@ function AddNewEducation({showModal}){
  <div className='flex justify-between items-center'>
  <div  className='flex flex-col'>
     <label htmlFor=""  className='text-xl'>Start Date</label>
-    <input  className='rounded-md bg-gray-300 text-gray-800'
+    <input  className='rounded-md bg-gray-300 text-gray-800 w-40 lg:w-auto'
     type="date" 
     name="startDate"
     value={startDate}
@@ -56,7 +56,7 @@ function AddNewEducation({showModal}){
  
  <div  className='flex flex-col'>
     <label htmlFor=""  className='text-xl'>End Date</label>
-    <input  className='rounded-md bg-gray-300 text-gray-800'
+    <input  className='rounded-md bg-gray-300 text-gray-800 w-40 lg:w-auto'
     type="date" 
     name="endDate"
     value={endDate}
@@ -74,7 +74,7 @@ function AddNewEducation({showModal}){
                     Cancel
                   </button>
                   <button
-                    className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="bg-blue-700 text-white active:bg-blue-800 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="submit"
                   >
                     Add

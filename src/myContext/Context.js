@@ -54,7 +54,9 @@ const AppProvider = ({ children }) =>{
       [name] : value
     }))
   }
-
+ const handleOnDelete = (id) =>{
+  setEducationDetails(educationDetails.filter(data => data.id !== id))
+ }
   
   
   return(
@@ -68,6 +70,7 @@ const AppProvider = ({ children }) =>{
        handleChange,
        addNewEdu,
        editEducation,
+       handleOnDelete,
       
       
        
