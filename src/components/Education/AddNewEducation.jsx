@@ -29,6 +29,7 @@ function AddNewEducation({showModal}){
     name="institution"
     value={institution} 
     onChange={(e) => handleInputChange(e)} 
+    required
     
     />
  </div>
@@ -39,6 +40,7 @@ function AddNewEducation({showModal}){
     name="Degree" 
     value={Degree}
     onChange={(e) => handleInputChange(e)} 
+    required
     
     />
  </div>
@@ -50,6 +52,7 @@ function AddNewEducation({showModal}){
     name="startDate"
     value={startDate}
     onChange={(e) => handleInputChange(e)} 
+    required
     
     />
  </div>
@@ -61,6 +64,7 @@ function AddNewEducation({showModal}){
     name="endDate"
     value={endDate}
     onChange={(e) => handleInputChange(e)} 
+    required
     
     />
  </div>

@@ -6,9 +6,12 @@ function EditEducation({details, showModal}){
     const id = details.id;
     const {editEducation} = useContext(AppContext)
 
-    const [educationInputValues, setEducationInputValues] = useState(details)
-  const {institution, Degree, startDate, endDate} = details
-  const editedEducation = { institution, Degree, startDate, endDate}
+    const [institution, setInstitution] = useState(details.institution)
+    const [degree, setDegree] = useState(details.Degree)
+    const [startDate, setStartDate] = useState(details.startDate)
+    const [endDate, setEndDate] = useState(details.endDate)
+
+  const editedEducation = {id, institution, degree, startDate, endDate}
    const handleSave = (e) =>  {
       e.preventDefault()
       editEducation(id, editedEducation)
@@ -21,8 +24,9 @@ function EditEducation({details, showModal}){
     <input className='rounded-md bg-gray-300 text-gray-800'
     type="text" 
     name="institution"
-    value={educationInputValues.institution}
-    onChange={(e) => setEducationInputValues(e.target.value)}
+    value={institution}
+    onChange={(e) => setInstitution(e.target.value.toUpperCase())}
+    required
     
     />
  </div>
@@ -30,9 +34,10 @@ function EditEducation({details, showModal}){
     <label htmlFor="" className='text-xl'>Course</label>
     <input  className='rounded-md bg-gray-300 text-gray-800'
     type="text"
-    name="Degree" 
-    value={educationInputValues.Degree}
-    onChange={(e) => setEducationInputValues(e.target.value)}
+    name="degree" 
+    value={degree}
+    onChange={(e) => setDegree(e.target.value.toUpperCase())}
+    required
     
     />
  </div>
@@ -42,8 +47,9 @@ function EditEducation({details, showModal}){
     <input  className='rounded-md bg-gray-300 text-gray-800'
     type="date" 
     name="startDate"
-    value={educationInputValues.startDate}
-    onChange={(e) => setEducationInputValues(e.target.value)}
+    value={startDate}
+    onChange={(e) => setStartDate(e.target.value.toUpperCase())}
+    required
   
     />
  </div>
@@ -53,8 +59,9 @@ function EditEducation({details, showModal}){
     <input  className='rounded-md bg-gray-300 text-gray-800'
     type="date" 
     name="endDate"
-    value={educationInputValues.endDate}
-    onChange={(e) => setEducationInputValues(e.target.value)}
+    value={endDate}
+    onChange={(e) => setEndDate(e.target.value.toUpperCase())}
+    required
     
     />
  </div>
