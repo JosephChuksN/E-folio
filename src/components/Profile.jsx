@@ -23,16 +23,16 @@ function Profile(){
                </div>
                     <div  className="text-gray-100  p-3">
                         <h1  className="text-2xl mb-3 font-bold">Location</h1>
-                        <span className="flex flex-col p-1 bg-blue-700/50 rounded-md">
+                        <span className="flex flex-col p-1 bg-[#1e293b] border-slate-50/20 border rounded-md">
                             <p className="text-xl ">Abuja, Nigeria</p>
-                            <p className="pt-5 flex items-center gap-2 text-purple-300">Portfolio <ion-icon name="link"></ion-icon></p>
-                           <span className="pt-5 flex items-center text-purple-300"><a href="https://nwosu-joseph-portfolio.vercel.app/">Nwosu Joseph  <ion-icon name="link"></ion-icon></a></span>
+                            <p className="pt-5 flex items-center gap-2 text-sky-400">Portfolio <ion-icon name="link"></ion-icon></p>
+                           <span className="pt-5 flex items-center text-purple-400"><a href="https://nwosu-joseph-portfolio.vercel.app/">Nwosu Joseph  <ion-icon name="link"></ion-icon></a></span>
                         </span>
                     </div>
               <div className="p-3">
                 <h1  className="text-2xl mb-3 font-bold">Education</h1>
                 <div>{ educationDetails.map(data => (
-                    <div className="flex gap-5 justify-between flex-col border-l-8 rounded-md mb-4 border-blue-700/50  pl-3">
+                    <div className="flex gap-5 justify-between flex-col border-l-8 rounded-md mb-4 border-sky-400  pl-3">
                         <div className="flex gap-3 items-center">
                             <span className="text-xl">Institution:</span>
                             <span className="font-light">{data.institution}</span>

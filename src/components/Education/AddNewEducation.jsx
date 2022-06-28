@@ -24,7 +24,7 @@ function AddNewEducation({showModal}){
 <form action="" onSubmit={handleAddEducation}  className='flex flex-col gap-5'>
  <div className='flex flex-col'>
     <label htmlFor=""  className='text-xl'>Institution</label>
-    <input className='rounded-md bg-gray-300 text-gray-800'
+    <input className='rounded-md border-slate-50/20  bg-sky-300/[0.15]'
     type="text" 
     name="institution"
     value={institution} 
@@ -35,7 +35,7 @@ function AddNewEducation({showModal}){
  </div>
  <div  className='flex flex-col'>
     <label htmlFor=""  className='text-xl'>Course</label>
-    <input  className='rounded-md bg-gray-300 text-gray-800'
+    <input  className='rounded-md border-slate-50/20  bg-sky-300/[0.15]'
     type="text"
     name="Degree" 
     value={Degree}
@@ -47,7 +47,7 @@ function AddNewEducation({showModal}){
  <div className='flex justify-between items-center'>
  <div  className='flex flex-col'>
     <label htmlFor=""  className='text-xl'>Start Date</label>
-    <input  className='rounded-md bg-gray-300 text-gray-800 w-40 lg:w-auto'
+    <input  className='rounded-md border-slate-50/20  bg-sky-300/[0.15] w-40 lg:w-auto'
     type="date" 
     name="startDate"
     value={startDate}
@@ -59,7 +59,7 @@ function AddNewEducation({showModal}){
  
  <div  className='flex flex-col'>
     <label htmlFor=""  className='text-xl'>End Date</label>
-    <input  className='rounded-md bg-gray-300 text-gray-800 w-40 lg:w-auto'
+    <input  className='rounded-md border-slate-50/20  bg-sky-300/[0.15] lg:w-auto'
     type="date" 
     name="endDate"
     value={endDate}
@@ -69,9 +69,9 @@ function AddNewEducation({showModal}){
     />
  </div>
  </div>
- <div className="flex items-center justify-end p-6 mt-6 border-t border-solid border-slate-200 rounded-b">
+ <div className="flex items-center justify-end p-6 mt-6   rounded-b">
                   <button
-                    className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="text-red-500 background-transparent  uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => showModal(false)}
                   >
