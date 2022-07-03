@@ -48,6 +48,10 @@ function Profile(){
                     </div>
                 ))}</div>
               </div>
+
+              <div className="p-3">
+              <h1  className="text-2xl mb-3 font-bold">Eperience</h1>
+              </div>
                 </div>
                
             </div>

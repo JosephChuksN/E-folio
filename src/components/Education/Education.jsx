@@ -11,18 +11,19 @@ const [showModal, setShowModal] = useState(false);
     return(
   <>
 
-  
+ <div className='lg:mt-36'>
+   
 <button
-        className="bg-transparent border-2 border-blue-700 hover:bg-blue-800/50  lg:mt-24 ml-3 mt-24 text-white active:bg-blue-800 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+        className="bg-transparent border-2 border-blue-700 hover:bg-blue-800/50 lg:absolute right-80 top-24 translate-y-20 translate-x-72 lg:translate-x-0 lg:translate-y-0 text-white active:bg-blue-800 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
         type="button"
         onClick={() => setShowModal(true)}
       >
-      Add New Education
+      New
       </button>
   <div className='mt-20 text-gray-100 lg:w-3/4'>{
     educationDetails.map(data => {
         return(
-            <div className='p-3' key={data.id}>
+            <div className='p-3  ' key={data.id}>
                 <EducationLayout details={data}  />
             </div>
         )
@@ -59,6 +60,7 @@ const [showModal, setShowModal] = useState(false);
           {/* <div className="opacity-25 fixed inset-0 z-40 bg-black"></div> */}
         </>
       ) : null}
+ </div>
   </>
     )
 }
