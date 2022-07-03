@@ -7,11 +7,11 @@ function EditEducation({details, showModal}){
     const {editEducation} = useContext(AppContext)
 
     const [institution, setInstitution] = useState(details.institution)
-    const [degree, setDegree] = useState(details.Degree)
+    const [Degree, setDegree] = useState(details.Degree)
     const [startDate, setStartDate] = useState(details.startDate)
     const [endDate, setEndDate] = useState(details.endDate)
 
-  const editedEducation = {id, institution, degree, startDate, endDate}
+  const editedEducation = {id, institution, Degree, startDate, endDate}
    const handleSave = (e) =>  {
       e.preventDefault()
       editEducation(id, editedEducation)
@@ -35,7 +35,7 @@ function EditEducation({details, showModal}){
     <input  className='rounded-md  border-slate-50/20  bg-sky-300/[0.15]'
     type="text"
     name="degree" 
-    value={degree}
+    value={Degree}
     onChange={(e) => setDegree(e.target.value.toUpperCase())}
     required
     
