@@ -48,7 +48,7 @@ function Sidebar(){
 
 return(
     
-    <div className={` transition-all  border-slate-50/20 border-r duration-500 ease-in-out z-40 ${isSidebarOpen ? "translate-x-0" : "-translate-x-72 "} lg:w-[20%] w-72 fixed lg:translate-x-0 lg:border-r border-slate-400 mt-0 `}>
+    <div className={` transition-all bg-gray-100 dark:bg-gray-900 transition-all border-slate-50/20 border-r duration-500 ease-in-out z-40 ${isSidebarOpen ? "translate-x-0" : "-translate-x-72 "} lg:w-[20%] w-72 fixed lg:translate-x-0 lg:border-r border-slate-400 mt-0 `}>
     <div className=" h-screen  ">
         <span><h1 className="text-gray-900 dark:text-gray-100 text-2xl p-2">OnlineCv</h1></span>
         <span className="text-gray-900 dark:text-gray-100  text-2xl absolute right-2 top-0.5 lg:hidden " onClick={closeSidebar} ><ion-icon name="close" ></ion-icon></span>
