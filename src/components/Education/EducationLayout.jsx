@@ -10,13 +10,13 @@ function EducationLayout({details}){
 
     return(
       <>
-          <div className='flex justify-between p-3  bg-[#1e293b] border-[1px] border-slate-50/20 rounded-md '>
+          <div className='flex justify-between p-3 bg-sky-300 dark:bg-[#1e293b] border-[1px] border-slate-50/20 rounded-md '>
           <div className='flex lg:gap-1 lg:justify-between w-3/4 gap-5 p-1 text-xl'>
             <span>{details.institution}</span>
             <span>{details.Degree}</span>
             <span className='lg:block hidden'>{`${details.startDate} - ${details.endDate}`}</span>
           </div>
-          <div className='flex lg:gap-5 gap-3 items-center  text-gray-100 lg:text-[1.3rem] p-1 delay-300 transition-all ease-in-out duration-500'>
+          <div className='flex lg:gap-5 gap-3 items-center  text-gray-50 lg:text-[1.3rem] p-1 delay-300 transition-all ease-in-out duration-500'>
           <span onClick={() => handleOnDelete(details.id)} className={`flex justify-center items-center rounded-full w-7 h-7 hover:bg-gray-50/20  ${showIcon? "" : "hidden"}`} ><ion-icon name="trash"></ion-icon></span>
           <span onClick={() => setShowModal(true)} className={`flex justify-center items-center rounded-full w-7 h-7 hover:bg-gray-50/20  ${showIcon? "" : "hidden"} `}><ion-icon name="create"></ion-icon></span>
             <span onClick={() => setShowIcon(!showIcon)} className={`flex animate-pulse justify-center items-center hover:bg-gray-50/20 rounded-full w-7 h-7 `}><ion-icon name={showIcon ? "close-circle" : "list"}></ion-icon></span>

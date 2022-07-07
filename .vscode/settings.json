@@ -1,6 +1,5 @@
 {
     "workbench.preferredHighContrastColorTheme": "Default Dark+",
     "workbench.preferredHighContrastLightColorTheme": "Default Dark+",
-    "workbench.iconTheme": "vs-seti",
-    "workbench.colorTheme": "Default Dark+"
+    "workbench.preferredLightColorTheme": "Default Light+"
 }

@@ -1,12 +1,47 @@
-import React, { useState, createContext } from 'react'
+import React, { useState, createContext, useEffect } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 
 
 const AppContext = createContext();
 
-const AppProvider = ({ children }) =>{
+const AppProvider = ({initailTheme, children }) =>{
 
- 
+  //This function sets the default theme
+  const getInitailTheme = () => {
+     if(typeof window !== "undefined" && window.localStorage){
+      const storedPrefs = window.localStorage.getItem("color-theme")
+
+    if(typeof storedPrefs === "string"){
+      return storedPrefs;
+    }
+    if(window.matchMedia("prefers-color-theme: dark")){
+      return "dark"
+    }
+
+     }
+  return "light";
+  }
+
+  const [theme, setTheme] = useState(getInitailTheme)
+
+  //This function checks and sets the theme to user preference
+  const checkTheme = (existing) => {
+      const root = window.document.documentElement;
+      const isDark = existing === "dark"
+      root.classList.remove(isDark? "light" : "dark")
+      root.classList.add(existing)
+      localStorage.setItem("color-theme", existing)
+
+  }
+   
+   if(initailTheme){
+    checkTheme(initailTheme)
+   }
+   useEffect(()=>{
+    checkTheme(theme)
+   }, [theme])
+
+
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [aboutText, setAboutText] = useState({
       textArea: "A web developer with 3 years of experience in frontend developer  and a graduate of the University of maiduguri, based in Abuja Nigeria,  I am an enthusiast in learning new technologies relating to web development  always curious about solving problems relating to my field.  You will find me watching football matches and spending time with family when not coding."
@@ -62,6 +97,8 @@ const AppProvider = ({ children }) =>{
   return(
    <AppContext.Provider
    value={{
+       theme,
+       setTheme,
        isSidebarOpen,
        aboutText,
        educationDetails,

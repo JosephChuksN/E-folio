@@ -4,15 +4,18 @@ import Profile from './components/Profile'
 import About from './components/About'
 import Education from './components/Education/Education'
 import { AppProvider } from './myContext/Context';
+import Background from './components/Background'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 function App() {
 
   return (
+    <AppProvider>
+      <Background>
     <Router>
     <div className='lg:flex  '>
-      <AppProvider>
+      
 <Sidebar />
     <div className='lg:w-[80%] lg:ml-[307px]'>
      <Appbar />
@@ -26,9 +29,11 @@ function App() {
     </main>
    
     </div>
-    </AppProvider>
+    
   </div>
   </Router>
+  </Background>
+  </AppProvider>
   );
 }
 

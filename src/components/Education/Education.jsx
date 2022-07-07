@@ -11,10 +11,10 @@ const [showModal, setShowModal] = useState(false);
     return(
   <>
 
- <div className='lg:mt-36'>
+ <div className='lg:mt-36 h-screen'>
    
 <button
-        className="bg-transparent border-2 border-blue-700 hover:bg-blue-800/50 lg:absolute right-80 top-24 translate-y-20 translate-x-72 lg:translate-x-0 lg:translate-y-0 text-white active:bg-blue-800 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+        className="bg-transparent   border-2 border-sky-300 dark:border-blue-700 hover:bg-blue-800/50 lg:absolute right-80 top-24 translate-y-20 translate-x-72 lg:translate-x-0 lg:translate-y-0 text-sky-300 dark:text-white active:bg-blue-800 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
         type="button"
         onClick={() => setShowModal(true)}
       >
