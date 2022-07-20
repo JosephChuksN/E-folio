@@ -48,7 +48,7 @@ function Sidebar() {
     >
       <div className=" h-screen  ">
         <span>
-          <h1 className="text-gray-900 dark:text-gray-100 text-2xl p-2">
+          <h1 className="text-gray-900 font-bold dark:text-gray-100 text-2xl p-2">
             OnlineCv
           </h1>
         </span>
@@ -67,7 +67,7 @@ function Sidebar() {
                 <li
                   onClick={closeSidebar}
                   key={`${lists.id}_{lists.name}`}
-                  className=" dark:hover:bg-[#1e293b] hover:bg-slate-600/10 text-gray-900 dark:text-gray-100   text-xl p-3"
+                  className="flex dark:hover:bg-[#1e293b] hover:bg-slate-600/10 text-gray-900 dark:text-gray-100   text-xl p-3"
                 >
                   <span className="mr-4 text-2xl">
                     <ion-icon name={lists.icon}></ion-icon>
@@ -89,7 +89,7 @@ function Sidebar() {
                 <li
                   onClick={closeSidebar}
                   key={`${lists.id}_{lists.name}`}
-                  className=" dark:hover:bg-[#1e293b] hover:bg-slate-600/10  text-gray-900 dark:text-gray-100   focus:text-sky-300 text-xl p-3"
+                  className=" dark:hover:bg-[#1e293b] flex hover:bg-slate-600/10  text-gray-900 dark:text-gray-100   focus:text-sky-300 text-xl p-3"
                 >
                   <span className="mr-4 text-2xl ">
                     <ion-icon name={lists.icon}></ion-icon>

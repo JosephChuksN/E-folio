@@ -60,15 +60,15 @@ const AppProvider = ({
       id: uuidv4(),
       institution: "UNIMAID",
       Degree: "ANATOMY",
-      startDate: "2020-10-13",
-      endDate: "2020-12-13",
+      startDate: "MAY 2022",
+      endDate: "JUN. 2022",
     },
     {
       id: uuidv4(),
       institution: "UMUDIKE",
       Degree: "BIOLOGY",
-      startDate: "2021-11-23",
-      endDate: "2021-12-23",
+      startDate: "AUG 2021",
+      endDate: "NOV 2021",
     }
   ])
 
@@ -117,6 +117,7 @@ const AppProvider = ({
         setTheme,
         isSidebarOpen,
         aboutText,
+        setAboutText,
         educationDetails,
         openSidebar,
         closeSidebar,

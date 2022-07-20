@@ -47,8 +47,8 @@ function AddNewEducation({showModal}){
  <div className='flex justify-between items-center'>
  <div  className='flex flex-col'>
     <label htmlFor=""  className='text-xl'>Start Date</label>
-    <input  className='rounded-md border-slate-50/20  bg-sky-300/[0.15] w-40 lg:w-auto'
-    type="date" 
+    <input  className='rounded-md  border-slate-50/20  bg-sky-300/[0.15] w-40 lg:w-auto'
+    type="text" 
     name="startDate"
     value={startDate}
     onChange={(e) => handleInputChange(e)} 
@@ -59,8 +59,8 @@ function AddNewEducation({showModal}){
  
  <div  className='flex flex-col'>
     <label htmlFor=""  className='text-xl'>End Date</label>
-    <input  className='rounded-md border-slate-50/20  bg-sky-300/[0.15] lg:w-auto'
-    type="date" 
+    <input  className='rounded-md w-40 border-slate-50/20  bg-sky-300/[0.15] lg:w-auto'
+    type="text" 
     name="endDate"
     value={endDate}
     onChange={(e) => handleInputChange(e)} 

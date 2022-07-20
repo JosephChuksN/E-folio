@@ -16,7 +16,7 @@ function About() {
         </span>
       </div>
       <textarea
-        className=" resize-none outline-none indent-1 lg:w-1/2 bg-slate-600/30  dark:bg-sky-300/[0.15] text-gray-900 dark:text-gray-50 border-slate-50/20 rounded border"
+        className=" resize-none outline-none text-justify indent-1 lg:w-1/2 bg-slate-600/30  dark:bg-sky-300/[0.15] text-gray-900 dark:text-gray-50 border-slate-50/20 rounded border"
         name="textArea"
         value={aboutText.textArea}
         id=""
@@ -25,11 +25,11 @@ function About() {
         maxLength={450}
         onChange={handleChange}
       />
-      <div className="grid grid-cols-2 gap-5 lg:w-72 ">
-        <button className="p-2 text-red-500 background-transparent  uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
+      <div className="flex gap-5 justify-end lg:w-1/2 ">
+        <button className=" text-red-500 background-transparent  uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
           Cancel
         </button>
-        <button className="p-2 bg-blue-700 hover:bg-blue-800/50 rounded">
+        <button className="bg-[#222222] dark:bg-[#1a73e8] py-2 px-6 hover:bg-blue-900 rounded text-white">
           Save
         </button>
       </div>

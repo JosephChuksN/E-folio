@@ -9,7 +9,7 @@ function EducationLayout({ details }) {
 
   return (
     <>
-      <div className="flex justify-between p-3 bg-sky-300 dark:bg-[#1e293b] border-[1px] border-slate-50/20 rounded-md ">
+      <div className="flex justify-between p-3 bg-[#1a73e8] dark:bg-[#1e293b] border-[1px] border-slate-50/20 rounded-md ">
         <div className="flex lg:gap-1 lg:justify-between w-3/4 gap-5 p-1 text-xl">
           <span>{details.institution}</span>
           <span>{details.Degree}</span>
