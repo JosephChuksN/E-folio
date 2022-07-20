@@ -11,7 +11,7 @@ function Appbar() {
   return (
     <div className="flex shadow-sm  h-16 fixed mt-20 lg:mt-0 w-full lg:w-[80%] lg:translate-y-0 bg-gray-100 dark:bg-gray-900 transition-all z-20 -translate-y-20  text-2xl items-center justify-between lg:justify-end border-b border-slate-50/20">
       <span className="lg:hidden">
-        <h1 className="text-sky-400 dark:text-gray-50 text-2xl p-2">
+        <h1 className="text-[#222222] font-bold dark:text-gray-50 text-2xl p-2">
           OnlineCv
         </h1>
       </span>

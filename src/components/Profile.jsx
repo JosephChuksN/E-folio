@@ -8,11 +8,12 @@ function Profile(){
             <div className=" text-gray-900 dark:text-gray-50  ">
                 <div className="translate-y-20   mb-28 ">
                     <div className="mx-3"><img className="lg:w-40 lg:h-40 w-32 h-32 rounded-full " src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png" alt="" /></div>
-                    <span className=" flex flex-col mt-5 pl-3">
+                    <div className=" flex  flex-col mt-5 pl-3">
                     <h1 className="text-xl font-bold">Nwosu Joseph</h1>
-                    <p className=" ">Abuja, Nigeria</p>
-                    <h1 className="text-gray-900 dark:text-slate-400">I'm a web developer</h1>
-                    </span>
+                    <p className=" dark:text-slate-400 ">Abuja, Nigeria</p>
+                    </div>
+                    <div className="px-3 whitespace-pre-wrap "><span className="text-gray-900 font-bold inline  break-all dark:text-white">Frontend Developer - JavaScript/React/TailwindCss/ Bootstrap</span></div>
+                    
                 </div>
 
                 <div className="md:grid grid-cols-2 md:gap-5 border-t mx-2 border-slate-600">
@@ -33,18 +34,18 @@ function Profile(){
               <div className="p-3">
                 <h1  className="text-2xl mb-3 font-bold">Education</h1>
                 <div>{ educationDetails.map(data => (
-                    <div key={data.id} className="grid grid-cols-2 gap-3 lg:w-[70%] items-center border-l-8 rounded-md mb-4 border-[#1a73e8] dark:border-sky-400  pl-3">
+                    <div key={data.id} className="grid grid-cols-2 gap-3 shadow-md dark:shadow-black/40 lg:w-[70%] items-center border-l-8 rounded-md mb-6 border-[#1a73e8] dark:border-sky-400  pl-3 pb-3 ">
                         
                             <span className="text-xl ">Institution:</span>
-                            <span className="font-light">{data.institution}</span>
+                            <span className="">{data.institution}</span>
                        
                        
                         <span className="text-xl">Course:</span>
-                        <span className="font-light">{data.Degree}</span>
+                        <span className="">{data.Degree}</span>
                        
                       
                         <span className="text-xl ">Date:</span>
-                        <span className="font-light">{`${data.startDate} - ${data.endDate}`}</span>
+                        <span className="">{`${data.startDate} - ${data.endDate}`}</span>
                     
                     </div>
                 ))}</div>

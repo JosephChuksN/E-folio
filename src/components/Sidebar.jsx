@@ -1,5 +1,5 @@
 import { React, useContext } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import AppContext from "../myContext/Context";
 
 function Sidebar() {
@@ -62,7 +62,7 @@ function Sidebar() {
         <ul className=" mx-2">
           {sideBarItems.map((lists) => {
             return (
-              <Link key={lists.id} to={lists.link}>
+              <NavLink key={lists.id} to={lists.link}>
                 {" "}
                 <li
                   onClick={closeSidebar}
@@ -74,7 +74,7 @@ function Sidebar() {
                   </span>
                   {lists.name}
                 </li>
-              </Link>
+              </NavLink>
             );
           })}
         </ul>
@@ -85,7 +85,7 @@ function Sidebar() {
         <ul className="mx-2 flex flex-col space-y-2">
           {sideBarItemsSub.map((lists) => {
             return (
-              <Link key={lists.id} to={lists.link}>
+              <NavLink key={lists.id} to={lists.link}   >
                 <li
                   onClick={closeSidebar}
                   key={`${lists.id}_{lists.name}`}
@@ -96,7 +96,7 @@ function Sidebar() {
                   </span>
                   {lists.name}
                 </li>
-              </Link>
+              </NavLink>
             );
           })}
         </ul>
