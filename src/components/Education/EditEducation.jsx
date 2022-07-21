@@ -45,7 +45,7 @@ function EditEducation({details, showModal}){
  <div  className='flex flex-col'>
     <label htmlFor="" className='text-xl'>Start Date</label>
     <input  className='rounded-md w-40 border-slate-50/20 bg-sky-300/[0.15]'
-    type="text" 
+    type="month" 
     name="startDate"
     value={startDate}
     onChange={(e) => setStartDate(e.target.value.toUpperCase())}
@@ -57,7 +57,7 @@ function EditEducation({details, showModal}){
  <div  className='flex flex-col'>
     <label htmlFor="" className='text-xl'>End Date</label>
     <input  className='rounded-md w-40  border-slate-50/20  bg-sky-300/[0.15]'
-    type="text" 
+    type="month" 
     name="endDate"
     value={endDate}
     onChange={(e) => setEndDate(e.target.value.toUpperCase())}

@@ -1,21 +1,24 @@
 import { React, useState, useContext } from "react";
 import EditExperience from "./EditExperience";
+import AppContext from "../../myContext/Context";
 import { FaEllipsisH, FaTimesCircle, FaPen, FaTrash } from "react-icons/fa"
 
 
 function ExperienceEdit({details}){
    
+  const {deleteExperience} = useContext(AppContext)
+
    const [showModal, setShowModal] = useState(false);
    const [showIcon, setShowIcon] = useState(false);
 
 return(
 <>
 <div className="p-3 text-gray-900  dark:text-gray-50">
-<div className="p-1  border-2 shadow-md dark:shadow-black/40 dark:bg-[#1e293b] border-slate-400/20 rounded lg:w-3/5 mb-4">
+<div className="p-1  border-2 shadow-md hover:shadow-lg dark:shadow-black/40 dark:bg-[#1e293b] border-slate-400/20 rounded lg:w-3/5 mb-4">
      <div className="flex justify-between">
-         <span className="font-light">OCT 2021 - NOV 2021</span>
+         <span className="font-light">{`${details.startDate} - ${details.endDate}`}</span>
          <div className="flex gap-5 items-center P-1">
-           <span  className={`flex justify-center items-center rounded-full w-7 h-7 hover:bg-slate-600/10  dark:hover:bg-gray-50/20 ${showIcon ? "block" : "hidden"}`}><FaTrash /></span>
+           <span onClick={()=> deleteExperience(details.id)}  className={`flex justify-center items-center rounded-full w-7 h-7 hover:bg-slate-600/10  dark:hover:bg-gray-50/20 ${showIcon ? "block" : "hidden"}`}><FaTrash /></span>
            <span onClick={() => setShowModal(true)}   className={`flex justify-center items-center rounded-full w-7 h-7 hover:bg-slate-600/10  dark:hover:bg-gray-50/20 ${showIcon ? "block" : "hidden"}`}><FaPen /></span>
            <span onClick={()=> setShowIcon(!showIcon)}  className="flex justify-center items-center rounded-full w-7 h-7 hover:bg-slate-600/10  dark:hover:bg-gray-50/20 " >{showIcon ? <FaTimesCircle /> : <FaEllipsisH />}</span>
          </div>
@@ -58,7 +61,7 @@ return(
                 </div>
                 {/*body*/}
                 <div className="relative  lg:p-6 p-4 flex-auto">
-                  <EditExperience data={details} />
+                  <EditExperience data={details} showModal={setShowModal} />
                 </div>
                 {/*footer*/}
               </div>

@@ -60,20 +60,20 @@ const AppProvider = ({
       id: uuidv4(),
       institution: "UNIMAID",
       Degree: "ANATOMY",
-      startDate: "MAY 2022",
-      endDate: "JUN. 2022",
+      startDate: "2019-05",
+      endDate: "2020-05",
     },
     {
       id: uuidv4(),
       institution: "UMUDIKE",
       Degree: "BIOLOGY",
-      startDate: "AUG 2021",
-      endDate: "NOV 2021",
+      startDate: "2021-08",
+      endDate: "2021-11",
     }
   ])
 const [experienceDetails, setExperienceDetals] = useState([
- {id:uuidv4(), company:"Openfinance", Role:"Front-end & UI Developer", jobDescription:"Development of corporate websites, newsletters,landings, pure HTML layout, CSS and Javascript"},
- {id:uuidv4(), company:"UNIR, Universidad Internacional de la Rioja", Role:"Front-end designer & Web designer", jobDescription:"Development and testing of corporate mailings, landings, and corporate banners design.",}
+ {id:uuidv4(), company:"Openfinance", Role:"Front-end & UI Developer", jobDescription:"Development of corporate websites, newsletters,landings, pure HTML layout, CSS and Javascript", startDate:"2021-07", endDate:"2021-11"},
+ {id:uuidv4(), company:"UNIR, Universidad Internacional de la Rioja", Role:"Front-end designer & Web designer", jobDescription:"Development and testing of corporate mailings, landings, and corporate banners design.", startDate:"2021-07", endDate:"2021-11",}
 ])
 
 
@@ -117,6 +117,10 @@ const [experienceDetails, setExperienceDetals] = useState([
       details.id === id ? editedExperience : details
     )))
   }
+  const deleteExperience = (id)=>{
+    setExperienceDetals(experienceDetails.filter(data =>(data.id !== id)))
+
+  }
 
 
   return ( 
@@ -136,6 +140,7 @@ const [experienceDetails, setExperienceDetals] = useState([
         setTheme,
         setAboutText,
         editExperience,
+        deleteExperience,
 
 
 
