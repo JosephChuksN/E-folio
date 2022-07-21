@@ -1,4 +1,5 @@
 import { React, useState, useContext } from "react";
+import { FaEllipsisH, FaTimesCircle, FaPen, FaTrash } from "react-icons/fa"
 import EditEducation from "./EditEducation";
 import AppContext from "../../myContext/Context";
 
@@ -15,14 +16,14 @@ function EducationLayout({ details }) {
           <span>{details.Degree}</span>
           <span className="lg:block hidden">{`${details.startDate} - ${details.endDate}`}</span>
         </div>
-        <div className="flex lg:gap-5 gap-3 items-center  text-gray-50 lg:text-[1.3rem] p-1 delay-300 transition-all ease-in-out duration-500">
+        <div className="flex lg:gap-5 gap-3 items-center  text-gray-50  p-1 delay-300 transition-all ease-in-out duration-500">
           <span
             onClick={() => handleOnDelete(details.id)}
             className={`flex justify-center items-center rounded-full w-7 h-7 hover:bg-gray-50/20  ${
               showIcon ? "" : "hidden"
             }`}
           >
-            <ion-icon name="trash"></ion-icon>
+            <FaTrash />
           </span>
           <span
             onClick={() => setShowModal(true)}
@@ -30,13 +31,14 @@ function EducationLayout({ details }) {
               showIcon ? "" : "hidden"
             } `}
           >
-            <ion-icon name="create"></ion-icon>
+            <FaPen />
           </span>
           <span
             onClick={() => setShowIcon(!showIcon)}
-            className={`flex animate-pulse justify-center items-center hover:bg-gray-50/20 rounded-full w-7 h-7 `}
+            className={`flex justify-center items-center hover:bg-gray-50/20 rounded-full w-7 h-7 `}
           >
-            <ion-icon name={showIcon ? "close-circle" : "list"}></ion-icon>
+            {showIcon ? <FaTimesCircle /> : <FaEllipsisH /> }
+           
           </span>
         </div>
       </div>

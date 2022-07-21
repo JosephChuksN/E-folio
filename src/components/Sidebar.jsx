@@ -3,6 +3,9 @@ import { NavLink } from "react-router-dom";
 import AppContext from "../myContext/Context";
 
 function Sidebar() {
+
+  const activelink = "font-extrabold border-l-4 border-[#1a73e8]  "
+  
   const { isSidebarOpen, closeSidebar } = useContext(AppContext);
 
   const sideBarItems = [
@@ -59,11 +62,14 @@ function Sidebar() {
           <ion-icon name="close"></ion-icon>
         </span>
 
-        <ul className=" mx-2">
+        <ul className=" mx-2 flex flex-col space-y-2">
           {sideBarItems.map((lists) => {
             return (
-              <NavLink key={lists.id} to={lists.link}>
-                {" "}
+              <NavLink key={lists.id} to={lists.link}
+              className={({ isActive }) => (
+                isActive ? activelink : null)}>
+              
+                
                 <li
                   onClick={closeSidebar}
                   key={`${lists.id}_{lists.name}`}
@@ -85,7 +91,11 @@ function Sidebar() {
         <ul className="mx-2 flex flex-col space-y-2">
           {sideBarItemsSub.map((lists) => {
             return (
-              <NavLink key={lists.id} to={lists.link}   >
+              <NavLink key={lists.id} to={lists.link} 
+              className={({ isActive }) => (
+             isActive ? activelink : null)
+        }
+              >
                 <li
                   onClick={closeSidebar}
                   key={`${lists.id}_{lists.name}`}
@@ -103,10 +113,16 @@ function Sidebar() {
 
         <div className="p-3 mt-64 text-gray-900 dark:text-gray-100  text-xl dark:hover:bg-[#1e293b] hover:bg-slate-600/10 space-x-4 mx-2 ">
           {" "}
+          <NavLink to="/settings"
+          className={({ isActive }) => (
+            isActive ? activelink : null)
+       }>
+            
           <span className="  ">
             <ion-icon name="settings"></ion-icon>
           </span>
           <span>Settings</span>
+          </NavLink>
         </div>
       </div>
     </div>

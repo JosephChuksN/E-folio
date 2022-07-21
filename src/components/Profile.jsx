@@ -9,10 +9,10 @@ function Profile(){
                 <div className="translate-y-20   mb-28 ">
                     <div className="mx-3"><img className="lg:w-40 lg:h-40 w-32 h-32 rounded-full " src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png" alt="" /></div>
                     <div className=" flex  flex-col mt-5 pl-3">
-                    <h1 className="text-xl font-bold">Nwosu Joseph</h1>
+                    <h1 className="text-xl font-bold break-words">Nwosu Joseph</h1>
                     <p className=" dark:text-slate-400 ">Abuja, Nigeria</p>
                     </div>
-                    <div className="px-3 whitespace-pre-wrap "><span className="text-gray-900 font-bold inline  break-all dark:text-white">Frontend Developer - JavaScript/React/TailwindCss/ Bootstrap</span></div>
+                    <div className="px-3  "><span className="text-gray-900 font-bold inline  break-all dark:text-white text-base">Frontend Developer - JavaScript/React/TailwindCss/ Bootstrap</span></div>
                     
                 </div>
 

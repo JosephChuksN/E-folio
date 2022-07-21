@@ -6,8 +6,8 @@ function ExperienceEdit(){
 
 return(
 <>
-<div className="p-3 lg:w-3/4  text-gray-50">
-<div className="p-1 border-2 dark:bg-[#1e293b] border-slate-400/20 rounded lg:w-3/4">
+<div className="p-3  text-gray-50">
+<div className="p-1  border-2 dark:bg-[#1e293b] border-slate-400/20 rounded lg:w-3/5">
      <div className="flex justify-between">
          <span className="font-light">OCT 2021 - NOV 2021</span>
          <div className="flex gap-5">

@@ -9,7 +9,7 @@ function Experience(){
 
 return(
 <>
-<div className="h-screen lg:mt-36">
+<div className="h-screen pt-36">
 <ExperienceEdit />
 </div>
 

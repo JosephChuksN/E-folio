@@ -20,14 +20,14 @@ function Appbar() {
           {theme === "dark" ? (
             <span
               onClick={handleThemeChange}
-              className="text-gray-900 dark:text-gray-50"
+              className="text-[#1a73e8]"
             >
               <ion-icon name="sunny"></ion-icon>
             </span>
           ) : (
             <span
               onClick={handleThemeChange}
-              className="text-gray-900 dark:text-gray-50"
+              className="text-[#1a73e8]"
             >
               <ion-icon name="moon"></ion-icon>
             </span>
