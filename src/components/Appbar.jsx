@@ -20,14 +20,14 @@ function Appbar() {
           {theme === "dark" ? (
             <span
               onClick={handleThemeChange}
-              className="text-[#1a73e8]"
+              className="text-[#1a73e8] flex justify-center items-center  rounded-full w-10 h-10 hover:bg-slate-600/10  dark:hover:bg-gray-50/20"
             >
               <ion-icon name="sunny"></ion-icon>
             </span>
           ) : (
             <span
               onClick={handleThemeChange}
-              className="text-[#1a73e8]"
+              className="text-[#1a73e8] flex justify-center items-center rounded-full w-10 h-10 hover:bg-slate-600/10  dark:hover:bg-gray-50/20"
             >
               <ion-icon name="moon"></ion-icon>
             </span>
@@ -35,7 +35,7 @@ function Appbar() {
         </div>
         <span
           onClick={openSidebar}
-          className="p-3 text-2xl lg:hidden text-gray-900 dark:text-gray-50"
+          className="p-3 text-2xl flex justify-center items-center lg:hidden text-gray-900 dark:text-gray-50"
         >
           <ion-icon name="menu"></ion-icon>
         </span>

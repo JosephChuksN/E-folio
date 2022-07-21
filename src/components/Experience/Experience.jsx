@@ -1,8 +1,9 @@
-import { React } from "react"
+import { React, useContext } from "react"
+import AppContext from "../../myContext/Context";
 import ExperienceEdit from "./ExperienceEdit";
 
 function Experience(){
-
+    const{ experienceDetails } = useContext(AppContext)
   
 
    
@@ -10,7 +11,11 @@ function Experience(){
 return(
 <>
 <div className="h-screen pt-36">
-<ExperienceEdit />
+    {experienceDetails.map((data)=>{
+        return(
+<ExperienceEdit details={data}  key={data.id} />
+        )
+    })}
 </div>
 
 

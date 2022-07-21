@@ -4,7 +4,7 @@ import AppContext from "../myContext/Context";
 
 function Sidebar() {
 
-  const activelink = "font-extrabold border-l-4 border-[#1a73e8]  "
+  const activelink = "lg:font-extrabold lg:border-l-4 lg:border-[#1a73e8]  "
   
   const { isSidebarOpen, closeSidebar } = useContext(AppContext);
 
@@ -45,7 +45,7 @@ function Sidebar() {
 
   return (
     <div
-      className={` transition-all bg-gray-100 dark:bg-gray-900  border-slate-50/20 border-r duration-500 ease-in-out z-40 ${
+      className={` transition-all bg-gray-100 dark:bg-gray-900  border-slate-50/20 border-r duration-500 ease-in-out z-50 ${
         isSidebarOpen ? "translate-x-0" : "-translate-x-72 "
       } lg:w-[20%] w-72 fixed lg:translate-x-0 lg:border-r border-slate-400 mt-0 `}
     >

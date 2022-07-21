@@ -34,7 +34,7 @@ function Profile(){
               <div className="p-3">
                 <h1  className="text-2xl mb-3 font-bold">Education</h1>
                 <div>{ educationDetails.map(data => (
-                    <div key={data.id} className="grid grid-cols-2 gap-3 shadow-md dark:shadow-black/40 lg:w-[70%] items-center border-l-8 rounded-md mb-6 border-[#1a73e8] dark:border-sky-400  pl-3 pb-3 ">
+                    <div key={data.id} className="grid grid-cols-2 gap-3 shadow-md dark:shadow-black/40 lg:w-[70%] items-center border-l-8 rounded-md mb-6 border-[#1a73e8]  pl-3 pb-3 ">
                         
                             <span className="text-xl ">Institution:</span>
                             <span className="">{data.institution}</span>

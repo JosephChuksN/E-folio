@@ -71,7 +71,10 @@ const AppProvider = ({
       endDate: "NOV 2021",
     }
   ])
-
+const [experienceDetails, setExperienceDetals] = useState([
+ {id:uuidv4(), company:"Openfinance", Role:"Front-end & UI Developer", jobDescription:"Development of corporate websites, newsletters,landings, pure HTML layout, CSS and Javascript"},
+ {id:uuidv4(), company:"UNIR, Universidad Internacional de la Rioja", Role:"Front-end designer & Web designer", jobDescription:"Development and testing of corporate mailings, landings, and corporate banners design.",}
+])
 
 
   const openSidebar = () => {
@@ -109,22 +112,30 @@ const AppProvider = ({
     setEducationDetails(educationDetails.filter(data => data.id !== id))
   }
 
+  const editExperience =(id, editedExperience) =>{
+    setExperienceDetals(experienceDetails.map((details)=>(
+      details.id === id ? editedExperience : details
+    )))
+  }
+
 
   return ( 
     <AppContext.Provider value = {
       {
         theme,
-        setTheme,
         isSidebarOpen,
         aboutText,
-        setAboutText,
         educationDetails,
+        experienceDetails,
         openSidebar,
         closeSidebar,
         handleChange,
         addNewEdu,
         editEducation,
         handleOnDelete,
+        setTheme,
+        setAboutText,
+        editExperience,
 
 
 

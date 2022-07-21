@@ -66,7 +66,7 @@ function EditEducation({details, showModal}){
     />
  </div>
  </div>
- <div className="flex items-center justify-end p-6 mt-6 gap-5 rounded-b">
+ <div className="flex items-center justify-end p-6 px-0 mt-6 gap-5 rounded-b">
                   <button
                     className="text-white bg-red-500/70  uppercase px-6 py-3 hover:bg-red-600 rounded text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"

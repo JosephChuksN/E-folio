@@ -22,7 +22,7 @@ function About() {
         <button className=" text-red-500 background-transparent  uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
           Cancel
         </button>
-        <button className="bg-[#222222] dark:bg-[#1a73e8] py-2 px-6 hover:bg-blue-900 rounded text-white">
+        <button className="bg-[#222222] dark:bg-[#1a73e8] py-2 uppercase px-6 hover:bg-blue-900 rounded text-white">
           Save
         </button>
       </div>
