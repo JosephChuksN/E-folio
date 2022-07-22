@@ -3,22 +3,23 @@ import AppContext from "../../myContext/Context";
 
 
 
-function EditExperience({data, showModal}){
+function AddNewExperience({showModal}){
 
-   const {editExperience} = useContext(AppContext)
+   const {addExperience} = useContext(AppContext)
+   const [newExperiennce, setNewExperience] = useState({id:"", company:"", Role:"", jobDescription:"", startDate:"", endDate:""})
 
-   const id = data.id
-   const [company, setCompany] = useState(data.company)
-   const [Role, setRole] = useState(data.Role)
-   const [jobDescription, setDescription] = useState(data.jobDescription)
-   const [startDate, setStartDate] = useState(data.startDate)
-   const [endDate, setEndDate] = useState(data.endDate)
+   const {company, Role, jobDescription, startDate, endDate} = newExperiennce
 
-  const editedExperience = {id, company, Role, jobDescription, startDate, endDate}
-const handleSave = (e) => {
- e.preventDefault()
- editExperience(id, editedExperience)
- showModal(false)
+   const handleInputChange = (e) =>{
+    const { name, value } = e.target
+    setNewExperience({...newExperiennce, [name] : value})
+   }
+
+   
+   const handleAddExperience = (e) =>{
+    e.preventDefault()
+    addExperience(company, Role, jobDescription, startDate, endDate)
+    showModal(false)
 }
 
 return(
@@ -32,7 +33,7 @@ return(
             name="company" 
             id="" 
             value={company}
-            onChange={(e)=>setCompany(e.target.value.toUpperCase())}
+            onChange={(e)=>handleInputChange(e)}
             required
             minLength="3"
             
@@ -42,10 +43,10 @@ return(
         <label htmlFor="">Role</label>
          <input className='rounded-md border-gray-900/20  dark:border-slate-50/20  dark:bg-sky-300/[0.15]'
             type="text" 
-            name="" 
+            name="Role" 
             id="role" 
             value={Role}
-            onChange={(e)=>setRole(e.target.value)}
+            onChange={(e)=>handleInputChange(e)}
             required
             minLength="3"
             
@@ -54,10 +55,10 @@ return(
      <div className='flex flex-col'>
         <label htmlFor="">Job Description</label>
          <textarea  className=" resize-none outline-none text-justify indent-1   border-gray-900/20  dark:bg-sky-300/[0.15] dark:border-gray-100/20 text-gray-900 dark:text-gray-50  rounded "
-         name="description" 
+         name="jobDescription" 
          id="" 
          value={jobDescription}
-         onChange={(e)=>setDescription(e.target.value)}
+         onChange={(e)=>handleInputChange(e)}
          cols="30" 
          rows="5" 
          required
@@ -74,7 +75,7 @@ return(
             name="startDate" 
             id="" 
             value={startDate}
-            onChange={(e)=>setStartDate(e.target.value.toUpperCase())}
+            onChange={(e)=>handleInputChange(e)}
             required
             
             />
@@ -86,7 +87,7 @@ return(
             name="endDate" 
             id="" 
             value={endDate}
-            onChange={(e)=>setEndDate(e.target.value.toString())}
+            onChange={(e)=>handleInputChange(e)}
             required
             
             />
@@ -102,7 +103,7 @@ return(
                     Cancel
                   </button>
                   <button
-                  onClick={handleSave}
+                  onClick={handleAddExperience}
                     className="bg-blue-700 text-white active:bg-emerald-800 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="submit"
                     
@@ -116,4 +117,4 @@ return(
 
 )
 }
-export default EditExperience;
+export default AddNewExperience;

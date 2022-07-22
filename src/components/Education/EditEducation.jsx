@@ -20,8 +20,9 @@ function EditEducation({details, showModal}){
     return(
 <form action="" onSubmit={handleSave} className='flex flex-col gap-5'>
  <div className='flex flex-col'>
+
     <label htmlFor="" className='text-xl'>Institution</label>
-    <input className='rounded-md  border-slate-50/20  bg-sky-300/[0.15]'
+    <input className='rounded-md border-gray-900/20  dark:border-slate-50/20  dark:bg-sky-300/[0.15]'
     type="text" 
     name="institution"
     value={institution}
@@ -29,10 +30,12 @@ function EditEducation({details, showModal}){
     required
     
     />
+
  </div>
  <div  className='flex flex-col'>
+
     <label htmlFor="" className='text-xl'>Course</label>
-    <input  className='rounded-md  border-slate-50/20  bg-sky-300/[0.15]'
+    <input className='rounded-md border-gray-900/20  dark:border-slate-50/20  dark:bg-sky-300/[0.15]'
     type="text"
     name="degree" 
     value={Degree}
@@ -40,11 +43,13 @@ function EditEducation({details, showModal}){
     required
     
     />
+
  </div>
  <div className='flex justify-between items-center'>
  <div  className='flex flex-col'>
+
     <label htmlFor="" className='text-xl'>Start Date</label>
-    <input  className='rounded-md w-40 border-slate-50/20 bg-sky-300/[0.15]'
+    <input  className='rounded-md w-40  border-gray-900/20  dark:border-slate-50/20  dark:bg-sky-300/[0.15]'
     type="month" 
     name="startDate"
     value={startDate}
@@ -52,11 +57,13 @@ function EditEducation({details, showModal}){
     required
   
     />
+
  </div>
  
  <div  className='flex flex-col'>
+
     <label htmlFor="" className='text-xl'>End Date</label>
-    <input  className='rounded-md w-40  border-slate-50/20  bg-sky-300/[0.15]'
+    <input  className='rounded-md w-40   border-gray-900/20  dark:border-slate-50/20  dark:bg-sky-300/[0.15]'
     type="month" 
     name="endDate"
     value={endDate}
@@ -64,6 +71,7 @@ function EditEducation({details, showModal}){
     required
     
     />
+    
  </div>
  </div>
  <div className="flex items-center justify-end p-6 px-0 mt-6 gap-5 rounded-b">

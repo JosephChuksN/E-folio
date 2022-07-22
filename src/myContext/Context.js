@@ -121,6 +121,9 @@ const [experienceDetails, setExperienceDetals] = useState([
     setExperienceDetals(experienceDetails.filter(data =>(data.id !== id)))
 
   }
+  const addExperience =(company, Role, jobDescription, startDate, endDate)=>{
+    setExperienceDetals([...experienceDetails, {id:uuidv4(), company, Role, jobDescription, startDate, endDate}])
+  }
 
 
   return ( 
@@ -141,6 +144,7 @@ const [experienceDetails, setExperienceDetals] = useState([
         setAboutText,
         editExperience,
         deleteExperience,
+        addExperience,
 
 
 
