@@ -1,8 +1,10 @@
 import { React, useContext } from "react";
+import ThemeContext from "../Context/ThemeContext";
 import AppContext from "../Context/Context";
 
 function Appbar() {
-  const { openSidebar, theme, setTheme } = useContext(AppContext);
+  const { openSidebar } = useContext(AppContext);
+  const { theme, setTheme } = useContext(ThemeContext)
 
   const handleThemeChange = () => {
     setTheme(theme === "dark" ? "light" : "dark");
