@@ -26,13 +26,13 @@ return(
 
                 
                 <div className="flex items-start justify-between p-5  rounded-t">
-                  <h3 className="text-3xl font-semibold pb-10">
+                  <h3 className="text-3xl font-semibold lg:pb-0 pb-10">
                    Settings
                   </h3>
                 </div>
                 
                 <div className="mx-auto">
-                  <div className="absolute  lg:top-36 lg:right-[23.25rem] top-40 right-44 text-2xl z-20">
+                  <div className="absolute  lg:top-40 lg:right-[23.25rem] top-40 right-44 text-2xl z-20">
                   <span ><FaCamera /></span>
                   <input className="hidden"
                   type="file" 
