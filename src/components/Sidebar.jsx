@@ -87,7 +87,7 @@ return (
 
 <ul className="mx-2 flex flex-col mt-2">
    <NavLink to="/settings" className={({ isActive }) => ( isActive ? activelink : null)}>
-   <li className=" dark:hover:bg-[#1e293b]  flex hover:bg-slate-600/10  text-gray-900 dark:text-gray-100   focus:text-sky-300 text-xl p-3">
+   <li  onClick={closeSidebar}  className=" dark:hover:bg-[#1e293b]  flex hover:bg-slate-600/10  text-gray-900 dark:text-gray-100   focus:text-sky-300 text-xl p-3">
     <span className="mr-4 text-2xl ">
 
           <ion-icon name="settings"></ion-icon>

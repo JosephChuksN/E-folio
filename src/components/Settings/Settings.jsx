@@ -1,17 +1,12 @@
 import {React, useRef } from "react"
 import SettingsDataTable from "./SettingsDataTable"
-import { FaCamera } from "react-icons/fa"
+import ProfileImgSettings from "./ProfileImgSettings"
+
 
 
 
 const Settings = () => {
-// const  upLoadInput = useRef()
-// const handleClick = (event) => {
-//   upLoadInput.current.click()
-// }
-// const handleChange = (event) =>{
-//   const upLoadedFile = event.target.files
-// }
+
 
 return(
     <>
@@ -30,22 +25,7 @@ return(
                    Settings
                   </h3>
                 </div>
-                
-                <div className="mx-auto">
-                  <div className="absolute  lg:top-40 lg:right-[23.25rem] top-40 right-44 text-2xl z-20">
-                  <span ><FaCamera /></span>
-                  <input className="hidden"
-                  type="file" 
-                  name="" 
-                  id=""
-                  // ref={upLoadInput}
-                  />
-                  </div>
-                 
-                    {/* */}
-                  <img className="lg:w-40 lg:h-40 w-32 h-32 rounded-full " src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png" alt="" />
-                  
-                  </div>
+                <ProfileImgSettings />
                 {/*body*/}
                 <div className="relative lg:p-6 p-4 flex-auto">
                  <SettingsDataTable />
