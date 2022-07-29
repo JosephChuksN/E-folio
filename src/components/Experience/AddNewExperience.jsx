@@ -1,5 +1,5 @@
 import { React, useState, useContext} from  "react";
-import AppContext from "../../myContext/Context";
+import AppContext from "../../Context/Context";
 
 
 

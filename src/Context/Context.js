@@ -1,7 +1,6 @@
 import React, {
   useState,
   createContext,
-  useEffect
 } from 'react'
 import {
   v4 as uuidv4
@@ -10,45 +9,7 @@ import {
 
 const AppContext = createContext();
 
-const AppProvider = ({
-  initailTheme,
-  children
-}) => {
-
-  //This function sets the default theme
-  const getInitailTheme = () => {
-    if (typeof window !== "undefined" && window.localStorage) {
-      const storedPrefs = window.localStorage.getItem("color-theme")
-
-      if (typeof storedPrefs === "string") {
-        return storedPrefs;
-      }
-      if (window.matchMedia("prefers-color-theme: dark")) {
-        return "dark"
-      }
-
-    }
-    return "light";
-  }
-
-  const [theme, setTheme] = useState(getInitailTheme)
-
-  //This function checks and sets the theme to user preference
-  const checkTheme = (existing) => {
-    const root = window.document.documentElement;
-    const isDark = existing === "dark"
-    root.classList.remove(isDark ? "light" : "dark")
-    root.classList.add(existing)
-    localStorage.setItem("color-theme", existing)
-
-  }
-
-  if (initailTheme) {
-    checkTheme(initailTheme)
-  }
-  useEffect(() => {
-    checkTheme(theme)
-  }, [theme])
+const AppProvider = ({ children }) => {
 
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -129,7 +90,6 @@ const [experienceDetails, setExperienceDetals] = useState([
   return ( 
     <AppContext.Provider value = {
       {
-        theme,
         isSidebarOpen,
         aboutText,
         educationDetails,
@@ -140,7 +100,6 @@ const [experienceDetails, setExperienceDetals] = useState([
         addNewEdu,
         editEducation,
         handleOnDelete,
-        setTheme,
         setAboutText,
         editExperience,
         deleteExperience,

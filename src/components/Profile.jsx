@@ -1,5 +1,5 @@
 import { React, useContext } from "react";  
-import AppContext from "../myContext/Context";
+import AppContext from "../Context/Context";
 
 function Profile(){
 
@@ -65,7 +65,7 @@ return(
      <h1  className="text-2xl mb-3 font-bold">Eperience</h1>
      {experienceDetails.map((details)=>{
 return(
-<div>
+<div key={details.id}>
                    
 <div className="p-2 border-2 border-slate-400/20 rounded mb-6">
 
@@ -78,9 +78,12 @@ return(
 </div>
 
 </div>
+
 </div>
 )})}
+
 </div>
+
 </div>
 
 </div>

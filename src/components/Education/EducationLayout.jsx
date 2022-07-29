@@ -1,7 +1,7 @@
 import { React, useState, useContext } from "react";
 import { FaEllipsisH, FaTimesCircle, FaPen, FaTrash } from "react-icons/fa"
 import EditEducation from "./EditEducation";
-import AppContext from "../../myContext/Context";
+import AppContext from "../../Context/Context";
 
 function EducationLayout({ details }) {
 const [showModal, setShowModal] = useState(false);

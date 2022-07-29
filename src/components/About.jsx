@@ -1,10 +1,11 @@
 import { React, useContext } from "react";
-import AppContext from "../myContext/Context";
+import AppContext from "../Context/Context";
 
 function About() {
   const { aboutText, handleChange } = useContext(AppContext);
   return (
     <div className="text-gray-100 pt-36 px-3 space-y-7 flex flex-col h-screen ">
+      <h1 className="pl-3 text-5xl text-gray-900 dark:text-gray-100 lg:mb-10 mb-20 ">About</h1>
         <h1 className="text-gray-900 dark:text-gray-100 text-xl font-bold">
           A great bio is unique and relatable.
         </h1>

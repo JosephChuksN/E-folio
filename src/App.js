@@ -4,7 +4,8 @@ import Profile from './components/Profile'
 import About from './components/About'
 import Education from './components/Education/Education'
 import Experience from './components/Experience/Experience'
-import { AppProvider } from './myContext/Context';
+import { ThemeProvider } from './Context/ThemeContext'
+import { AppProvider } from './Context/Context';
 import Background from './components/Background'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
@@ -12,8 +13,10 @@ import './App.css';
 function App() {
 
   return (
+    <ThemeProvider>
     <AppProvider>
       <Background>
+      
     <Router>
     <div className='lg:flex  '>
       
@@ -36,6 +39,8 @@ function App() {
   </Router>
   </Background>
   </AppProvider>
+  </ThemeProvider>
+  
   );
 }
 

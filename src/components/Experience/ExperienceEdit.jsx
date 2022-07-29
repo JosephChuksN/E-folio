@@ -1,6 +1,6 @@
 import { React, useState, useContext } from "react";
 import EditExperience from "./EditExperience";
-import AppContext from "../../myContext/Context";
+import AppContext from "../../Context/Context";
 import { FaEllipsisH, FaTimesCircle, FaPen, FaTrash } from "react-icons/fa"
 
 

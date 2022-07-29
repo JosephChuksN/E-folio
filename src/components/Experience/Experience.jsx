@@ -1,5 +1,5 @@
 import { React, useState, useContext } from "react"
-import AppContext from "../../myContext/Context";
+import AppContext from "../../Context/Context";
 import AddNewExperience from "./AddNewExperience";
 import ExperienceEdit from "./ExperienceEdit";
 
@@ -11,24 +11,24 @@ return(
 <>
 
 <div className="h-screen pt-36">
-<div className='lg:pt-0 pt-6'>
+<div className=''>
 <h1 className="pl-3 text-5xl mb-20">Experience</h1>
     <button
-            className="bg-[#222222] dark:bg-[#1a73e8] hover:bg-[#222222]/90 absolute lg:right-[30.5rem] lg:top-56 top-60 right-2  text-white active:bg-blue-800 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            className="bg-[#222222] dark:bg-[#1a73e8] hover:bg-[#222222]/90 absolute lg:right-[42rem] lg:top-56 top-60 right-2  text-white active:bg-blue-800 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="button"
             onClick={() => setShowModal(true)}
           >
           New
           </button>
        </div>
-       
-        {experienceDetails.map((data)=>{
+<div className='mt-24 lg:mt-0 text-gray-100 lg:w-3/4'>{      
+        experienceDetails.map((data)=>{
         return(
 
          <ExperienceEdit details={data}  key={data.id} />
-
-        )
-})}
+         )
+        })
+        }</div>
 
 </div>
 

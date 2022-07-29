@@ -1,5 +1,5 @@
 import { React, useContext, useState } from 'react'
-import AppContext from '../../myContext/Context';
+import AppContext from '../../Context/Context';
 
 function AddNewEducation({showModal}){
 

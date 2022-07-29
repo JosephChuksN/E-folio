@@ -1,6 +1,6 @@
 import { React, useContext } from "react";
 import { NavLink } from "react-router-dom";
-import AppContext from "../myContext/Context";
+import AppContext from "../Context/Context";
 
 function Sidebar() {
 
