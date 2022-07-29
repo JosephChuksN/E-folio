@@ -4,6 +4,7 @@ import Profile from './components/Profile'
 import About from './components/About'
 import Education from './components/Education/Education'
 import Experience from './components/Experience/Experience'
+import Settings from './components/Settings/Settings'
 import { ThemeProvider } from './Context/ThemeContext'
 import { AppProvider } from './Context/Context';
 import Background from './components/Background'
@@ -20,7 +21,8 @@ function App() {
     <Router>
     <div className='lg:flex  '>
       
-<Sidebar />
+    <Sidebar />
+    
     <div className='lg:w-[80%] lg:ml-[307px]'>
      <Appbar />
      
@@ -30,6 +32,7 @@ function App() {
     <Route exact path='/About' element={<About />} />
     <Route exact path='/Education' element={<Education />} />
     <Route exact path='/experience' element={<Experience />} />
+    <Route exact path='/settings' element={<Settings />} />
     </Routes>
     </main>
    

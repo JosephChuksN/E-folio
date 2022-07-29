@@ -22,7 +22,7 @@ const sideBarItemsSub = [
 
 return (
 <div
-  className={` transition-all bg-gray-100 dark:bg-gray-900  border-slate-50/20 border-r duration-500 ease-in-out z-50 ${
+  className={` overflow-y-auto transition-all bg-gray-100 dark:bg-gray-900  border-slate-50/20 border-r duration-500 ease-in-out z-50 ${
   isSidebarOpen ? "translate-x-0" : "-translate-x-72 "
   } lg:w-[20%] w-72 fixed lg:translate-x-0 lg:border-r border-slate-400 mt-0 `}
   >
@@ -85,17 +85,18 @@ return (
 })}
     </ul>
 
-<div className="p-3 mt-64 text-gray-900 dark:text-gray-100  text-xl dark:hover:bg-[#1e293b] hover:bg-slate-600/10 space-x-4 mx-2 ">
-          {" "}
+<ul className="mx-2 flex flex-col mt-2">
    <NavLink to="/settings" className={({ isActive }) => ( isActive ? activelink : null)}>
-   <span className="  ">   
-           
-           <ion-icon name="settings"></ion-icon>
-           
-   </span>
-   <span>Settings</span>
+   <li className=" dark:hover:bg-[#1e293b]  flex hover:bg-slate-600/10  text-gray-900 dark:text-gray-100   focus:text-sky-300 text-xl p-3">
+    <span className="mr-4 text-2xl ">
+
+          <ion-icon name="settings"></ion-icon>
+    </span>
+   Settings
+    </li>
    </NavLink>
- </div>
+</ul>
+
 
 </div>
 </div>
