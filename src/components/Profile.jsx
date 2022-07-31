@@ -1,8 +1,11 @@
 import { React, useContext } from "react";  
 import AppContext from "../Context/Context";
 
-function Profile(){
 
+
+
+function Profile({randUser}){
+// var name = randFullName()
 const {aboutText,  educationDetails, experienceDetails} =useContext(AppContext)
 
 return(

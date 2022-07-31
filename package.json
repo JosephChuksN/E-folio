@@ -5,9 +5,11 @@
   "private": true,
   "dependencies": {
     "@hirobreak/react-dropdown-date": "^1.1.7",
+    "@ngneat/falso": "^6.0.3",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "faker": "^6.6.6",
     "flowbite": "^1.4.7",
     "flowbite-react": "^0.0.27",
     "react": "^18.1.0",
@@ -47,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "@faker-js/faker": "^7.3.0",
     "autoprefixer": "^10.4.7",
     "gh-pages": "^4.0.0",
     "postcss": "^8.4.14",

@@ -12,7 +12,7 @@ const handleUpload = (e) =>{
         const { current } = upLoadedImg
         upLoadedImg.file = file
         reader.onload = (e) =>{
-            current.img = e.target.result
+            current.src = e.target.result
         }
         reader.readAsDataURL(file);
     }
@@ -31,12 +31,12 @@ return(
     ref={upLoadInput}
     onChange={handleUpload}
     accept="image/*"
-    multiple="false"
+    multiple={false}
     />
     </div>
    
       {/* */}
-    <img className="lg:w-44 lg:h-44 w-32 h-32  rounded-xl " 
+    <img className="lg:max-w-44 lg:max-h-44 max-w-32 max-h-32 w-auto h-auto block rounded-full " 
     src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png" 
     alt=""
     ref={upLoadedImg}
