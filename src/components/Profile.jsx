@@ -15,15 +15,15 @@ return(
 
 <div className="translate-y-20   mb-28 ">
 
-<div className="mx-3"><img className="lg:w-40 lg:h-40 w-32 h-32 rounded-full " src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png" alt="" /></div>
+<div className="mx-3"><img className="lg:w-40 lg:h-40 w-32 h-32 rounded-full " src={props.user.profileImg} alt="" /></div>
 <div className=" flex  flex-col mt-5 pl-3">
 
-     <h1 className="text-xl font-bold break-words">Nwosu Joseph</h1>
-     <p className=" dark:text-slate-400 ">Abuja, Nigeria</p>
+     <h1 className="text-xl font-bold break-words">{props.user.fullName}</h1>
+     <p className=" dark:text-slate-400 ">{props.user.city}</p>
 
 </div>
 
-<div className="px-3  "><span className="text-gray-900 font-bold inline  break-all dark:text-white text-base">Frontend Developer - JavaScript/React/TailwindCss/ Bootstrap</span></div>
+<div className="px-3  "><span className="text-gray-900 font-bold inline  break-all dark:text-white text-base">{props.user.jobTitle}</span></div>
                     
 </div>
 
@@ -42,7 +42,7 @@ return(
       <span className="flex flex-col p-1 bg-slate-600/30 dark:bg-[#1e293b]  border-slate-50/20 border rounded-md">
                             
       <p className="pt-5 flex items-center gap-2 text-blue-700 dark:text-sky-400">Portfolio <ion-icon name="link"></ion-icon></p>
-      <span className="pt-5 flex items-center text-purple-700"><a href="https://nwosu-joseph-portfolio.vercel.app/">Nwosu Joseph  <ion-icon name="link"></ion-icon></a></span>
+      <span className="pt-5 flex items-center text-purple-700"><a href="https://nwosu-joseph-portfolio.vercel.app/">{props.user.fullName}<ion-icon name="link"></ion-icon></a></span>
       </span>
 
 </div>

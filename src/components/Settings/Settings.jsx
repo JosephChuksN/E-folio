@@ -5,7 +5,7 @@ import ProfileImgSettings from "./ProfileImgSettings"
 
 
 
-const Settings = () => {
+const Settings = (props) => {
 
 
 return(
@@ -25,10 +25,16 @@ return(
                    Settings
                   </h3>
                 </div>
-                <ProfileImgSettings />
+                <ProfileImgSettings
+                user={props.user}
+                />
                 {/*body*/}
                 <div className="relative lg:p-6 p-4 flex-auto">
-                 <SettingsDataTable />
+                 <SettingsDataTable
+                 user={props.user}
+                 setUser={props.setUser}
+
+                 />
                 </div>
                 {/*footer*/}
               

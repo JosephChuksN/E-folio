@@ -1,6 +1,9 @@
 import { v4 as uuidv4 } from 'uuid';
+import { randFullName, randCity, randJobTitle, randAvatar } from '@ngneat/falso';
    
  
+const user = { fullName: randFullName(), city: randCity(), jobTitle: randJobTitle(), profileImg: randAvatar() };
+
 const AboutText = () => {
     var txt = "A web developer with 3 years of experience in frontend developer  and a graduate of the University of maiduguri, based in Abuja Nigeria,  I am an enthusiast in learning new technologies relating to web development  always curious about solving problems relating to my field.  You will find me watching football matches and spending time with family when not coding."
     return txt
@@ -32,4 +35,4 @@ const experienceData = [
    ]
 
 export const AboutTxt = AboutText;
-export {educationData, experienceData};
+export {educationData, experienceData, user};

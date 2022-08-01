@@ -1,7 +1,7 @@
 import {React, useRef } from "react";
 import { FaCamera } from "react-icons/fa"
 
-const ProfileImgSettings = () =>{
+const ProfileImgSettings = (props) =>{
 const  upLoadInput = useRef(null)
 const upLoadedImg = useRef(null)
 
@@ -36,8 +36,8 @@ return(
     </div>
    
       {/* */}
-    <img className="lg:max-w-44 lg:max-h-44 max-w-32 max-h-32 w-auto h-auto block rounded-full " 
-    src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png" 
+    <img className="lg:w-32 lg:h-32 max-w-32 max-h-32 block rounded-full " 
+    src={props.user.profileImg} 
     alt=""
     ref={upLoadedImg}
      />
