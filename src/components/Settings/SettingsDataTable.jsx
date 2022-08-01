@@ -1,18 +1,29 @@
-import {React, useState } from "react"
+import {React, useState, useRef } from "react"
+import { FaCamera } from "react-icons/fa"
 
 
 
 const SettingsDataTable = ({user, setUser}) => {
-    
+const  upLoadInput = useRef(null)
+
 const [userTextFields, setUserTextFields] = useState(user)
 
 const handleChange = (e) =>{
   const { name, value } = e.target
   var obj= {...userTextFields}
 
- obj = {obj,[name]:value}
- setUserTextFields(obj)
+ if(e.target.type !== "file") {
+  obj = {...obj,[name]:value}
+ } else{
+  if(e.target.files[0]){
+  obj = {...obj,"profileImg":URL.createObjectURL(e.target.file[0])}
+ }
+    
+}
 
+ 
+ setUserTextFields(obj)
+ 
 }
 const handleSave = (e) =>{
    e.preventDefault()
@@ -21,7 +32,28 @@ const handleSave = (e) =>{
 
 return(
 <>
-<form onSubmit={handleSave} className="lg:pt-5 pt-10" >
+<form onSubmit={handleSave} className="lg:pt-5 " >
+  
+<div className="mx-auto ">
+    <div className="absolute  lg:top-36 lg:right-[23.25rem] top-24 right-44 text-2xl z-20">
+    <span onClick={()=> upLoadInput.current.click()}><FaCamera /></span>
+    <input className="hidden"
+    type="file" 
+    name="" 
+    id=""
+    ref={upLoadInput}
+    onChange={handleChange}
+    accept="image/*"
+    
+    />
+    </div>
+   
+      {/* */}
+    <div className="lg:w-52 lg:h-52 w-44 h-44   mx-auto block rounded-full bg-no-repeat bg-center bg-cover mb-5" 
+      style={{backgroundImage: `url(${userTextFields.profileImg})`}}
+     />
+    
+    </div>
 <div className="relative z-0 mb-10 w-full group">
       <input  className="block rounded px-2.5 pb-2.5 pt-5 w-full text-md text-gray-900 bg-gray-100 dark:bg-[#1e293b]/80  border-gray-900/20 dark:border-gray-100/20  appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
       type="text" 

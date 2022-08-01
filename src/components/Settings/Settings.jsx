@@ -1,6 +1,5 @@
 import {React } from "react"
 import SettingsDataTable from "./SettingsDataTable"
-import ProfileImgSettings from "./ProfileImgSettings"
 
 
 
@@ -12,7 +11,7 @@ return(
     <>
       <>
           <div
-            className=" justify-center items-center text-gray-900 dark:text-gray-100 flex overflow-x-hidden overflow-y-auto fixed inset-0  outline-none focus:outline-none"
+            className="lg:pt-10 pt-14 justify-center items-center text-gray-900 dark:text-gray-100 flex overflow-x-hidden overflow-y-auto fixed inset-0  outline-none focus:outline-none"
           >
             <div className="relative w-full lg:w-3/4 my-6 lg:mx-auto mx-2 shadow-lg shadow-black/60 bg-gray-100 dark:bg-[#1e293b]/80  rounded-md max-w-3xl">
               {/*content*/}
@@ -21,13 +20,11 @@ return(
 
                 
                 <div className="flex items-start justify-between p-5  rounded-t">
-                  <h3 className="text-3xl font-semibold lg:pb-0 pb-10">
+                  <h3 className="text-3xl font-semibold ">
                    Settings
                   </h3>
                 </div>
-                <ProfileImgSettings
-                user={props.user}
-                />
+              
                 {/*body*/}
                 <div className="relative lg:p-6 p-4 flex-auto">
                  <SettingsDataTable
