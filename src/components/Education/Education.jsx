@@ -55,7 +55,10 @@ const [showModal, setShowModal] = useState(false);
 </div>
                 {/*body*/}
 <div className="relative lg:p-6 p-4 flex-auto">
-                 <AddNewEducation showModal={setShowModal}/>
+                 <AddNewEducation 
+                   educationData={props.educationData}
+                   setEducationData={props.setEducationData}
+                   showModal={setShowModal}/>
 </div>
                 {/*footer*/}
               

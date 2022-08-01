@@ -1,12 +1,20 @@
-import { React, useContext, useState } from 'react'
-import AppContext from '../../Context/Context';
+import { React, useState } from 'react'
+import { v4 as uuidv4 } from 'uuid';
+   
 
-function AddNewEducation({showModal}){
 
-    const {addNewEdu} = useContext(AppContext)
+function AddNewEducation({educationData, setEducationData, showModal}){
+
+ 
     const [newEducation, setNewEducation] = useState({id: "", institution: "", Degree: "", startDate: "", endDate: ""})
 
     const {institution, Degree, startDate, endDate} = newEducation;
+     
+  const addNewEdu = (institution, Degree, startDate, endDate) => {
+    setEducationData([...educationData, { id: uuidv4(), institution, Degree,  startDate, endDate }])
+     
+  }
+
     const handleInputChange = (e) => {
         const { name, value } = e.target
     
