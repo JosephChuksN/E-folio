@@ -59,16 +59,6 @@ const [experienceDetails, setExperienceDetals] = useState([
     setEducationDetails(educationDetails.map(details => (details.id === id ? editedEducation : details)))
   }
 
-  const handleChange = (event) => {
-    const {
-      name,
-      value
-    } = event.target
-    setAboutText(aboutText => ({
-
-      [name]: value
-    }))
-  }
   const handleOnDelete = (id) => {
     setEducationDetails(educationDetails.filter(data => data.id !== id))
   }
@@ -96,7 +86,6 @@ const [experienceDetails, setExperienceDetals] = useState([
         experienceDetails,
         openSidebar,
         closeSidebar,
-        handleChange,
         addNewEdu,
         editEducation,
         handleOnDelete,

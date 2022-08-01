@@ -1,4 +1,4 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 import Sidebar from './components/Sidebar'
 import Appbar from './components/Appbar'
 import Profile from './components/Profile'
@@ -9,14 +9,14 @@ import Settings from './components/Settings/Settings'
 import { ThemeProvider } from './Context/ThemeContext'
 import { AppProvider } from './Context/Context';
 import Background from './components/Background'
-// import randomUser from './RandomData'
+import { AboutTxt } from './TestData'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 
 
 function App() {
-//  const {randUser, setRandUser} = useState(randomUser)
+  const [aboutText, setAboutText] = useState(AboutTxt)
 
 
 
@@ -35,8 +35,24 @@ function App() {
      
     <main className=' z-10'>
     <Routes>
-    <Route exact path='/'  element={<Profile  />} />
-    <Route exact path='/About' element={<About />} />
+
+    <Route 
+     exact path='/'  
+     element={
+     <Profile 
+     aboutText={aboutText} 
+     
+    
+    />} />
+
+    <Route 
+     exact path='/About' 
+     element={
+     <About 
+     aboutText={aboutText} 
+     setAboutText={setAboutText} 
+    />} />
+
     <Route exact path='/Education' element={<Education />} />
     <Route exact path='/experience' element={<Experience />} />
     <Route exact path='/settings' element={<Settings />} />

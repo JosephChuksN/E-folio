@@ -4,9 +4,9 @@ import AppContext from "../Context/Context";
 
 
 
-function Profile({randUser}){
-// var name = randFullName()
-const {aboutText,  educationDetails, experienceDetails} =useContext(AppContext)
+function Profile({aboutText}){
+
+const {educationDetails, experienceDetails} =useContext(AppContext)
 
 return(
 <div className=" ">
@@ -33,7 +33,7 @@ return(
 
      <h1 className="text-2xl mb-3 font-bold">About</h1>
      <span>
-     <p className="text-justify tracking-tight">{aboutText.textArea}</p>
+     <p className="text-justify tracking-tight">{aboutText}</p>
      </span>
 
 </div>
