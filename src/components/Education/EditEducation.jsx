@@ -1,21 +1,30 @@
-import { React, useContext, useState } from 'react'
-import AppContext from '../../Context/Context';
+import { React, useState } from 'react'
 
-function EditEducation({details, showModal}){
+
+function EditEducation({details, educationData, setEducationData, showModal}){
 
     const id = details.id;
-    const {editEducation} = useContext(AppContext)
+   
+
 
     const [institution, setInstitution] = useState(details.institution)
     const [Degree, setDegree] = useState(details.Degree)
     const [startDate, setStartDate] = useState(details.startDate)
     const [endDate, setEndDate] = useState(details.endDate)
 
-  const editedEducation = {id, institution, Degree, startDate, endDate}
+    
+    const editedEducation = {id, institution, Degree, startDate, endDate}
+
+  const editEducation = (id, editedEducation) => {
+   setEducationData(educationData.map(details => (details.id === id ? editedEducation : details)))
+ }
+
+ 
    const handleSave = (e) =>  {
       e.preventDefault()
       editEducation(id, editedEducation)
       showModal(false)
+      
    }
     return(
 <form action="" onSubmit={handleSave} className='flex flex-col gap-5'>

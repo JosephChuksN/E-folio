@@ -9,14 +9,16 @@ import Settings from './components/Settings/Settings'
 import { ThemeProvider } from './Context/ThemeContext'
 import { AppProvider } from './Context/Context';
 import Background from './components/Background'
-import { AboutTxt } from './TestData'
+import { AboutTxt, EducationData } from './TestData'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 
 
 function App() {
+
   const [aboutText, setAboutText] = useState(AboutTxt)
+  const [educationData, setEducationData] = useState(EducationData)
 
 
 
@@ -41,8 +43,8 @@ function App() {
      element={
      <Profile 
      aboutText={aboutText} 
+     educationData={educationData}
      
-    
     />} />
 
     <Route 
@@ -51,9 +53,18 @@ function App() {
      <About 
      aboutText={aboutText} 
      setAboutText={setAboutText} 
+
     />} />
 
-    <Route exact path='/Education' element={<Education />} />
+    <Route 
+     exact path='/Education' 
+     element={
+     <Education 
+     educationData={educationData}
+     setEducationData={setEducationData}
+
+     />} />
+
     <Route exact path='/experience' element={<Experience />} />
     <Route exact path='/settings' element={<Settings />} />
     </Routes>

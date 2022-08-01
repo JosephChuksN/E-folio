@@ -1,12 +1,18 @@
-import { React, useState, useContext } from "react";
+import { React, useState } from "react";
 import { FaEllipsisH, FaTimesCircle, FaPen, FaTrash } from "react-icons/fa"
 import EditEducation from "./EditEducation";
-import AppContext from "../../Context/Context";
 
-function EducationLayout({ details }) {
+
+function EducationLayout({ details, educationData, setEducationData }) {
 const [showModal, setShowModal] = useState(false);
 const [showIcon, setShowIcon] = useState(false);
-const { handleOnDelete } = useContext(AppContext);
+
+const id = details.id
+
+const handleDelete = () =>{
+  setEducationData(educationData.filter(data =>(data.id !== id)))
+}
+
 
 return (
 <>
@@ -19,7 +25,7 @@ return (
 
 <div className="flex lg:gap-5 gap-3 items-center   p-1 delay-300 transition-all ease-in-out duration-500">
      <span
-     onClick={() => handleOnDelete(details.id)}
+     onClick={handleDelete}
      className={`flex justify-center items-center rounded-full w-7 h-7 hover:bg-gray-50/20  ${
      showIcon ? "" : "hidden"
      }`}
@@ -91,7 +97,11 @@ return (
                 {/*body*/}
 <div className="relative  lg:p-6 p-4 flex-auto">
 
-     <EditEducation details={details} showModal={setShowModal} />
+     <EditEducation 
+     details={details} 
+     educationData={educationData}
+     setEducationData={setEducationData}
+     showModal={setShowModal} />
 
 </div>
                 {/*footer*/}

@@ -1,11 +1,11 @@
-import { React,  useContext, useState } from 'react'
+import { React, useState } from 'react'
 import EducationLayout from './EducationLayout'
 import AddNewEducation from './AddNewEducation'
-import AppContext from '../../Context/Context'
 
 
-function Education(){
-const { educationDetails} = useContext(AppContext)
+
+function Education(props){
+
 const [showModal, setShowModal] = useState(false);
 
  return(
@@ -23,10 +23,13 @@ const [showModal, setShowModal] = useState(false);
   </button>
 </div>
 <div className='mt-24 lg:mt-0 text-gray-100 lg:w-3/4'>{
-    educationDetails.map(data => {
+    props.educationData.map(data => {
         return(
         <div className='p-3  ' key={data.id}>
-                <EducationLayout details={data}  />
+                <EducationLayout
+                 details={data} 
+                 educationData={props.educationData}
+                 setEducationData={props.setEducationData} />
             </div>
        )
        })

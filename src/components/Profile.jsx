@@ -4,9 +4,9 @@ import AppContext from "../Context/Context";
 
 
 
-function Profile({aboutText}){
+function Profile(props){
 
-const {educationDetails, experienceDetails} =useContext(AppContext)
+const { experienceDetails} =useContext(AppContext)
 
 return(
 <div className=" ">
@@ -33,7 +33,7 @@ return(
 
      <h1 className="text-2xl mb-3 font-bold">About</h1>
      <span>
-     <p className="text-justify tracking-tight">{aboutText}</p>
+     <p className="text-justify tracking-tight">{props.aboutText}</p>
      </span>
 
 </div>
@@ -49,7 +49,7 @@ return(
 <div className="p-3">
      <h1  className="text-2xl mb-3 font-bold">Education</h1>
 
-<div>{ educationDetails.map(data => (
+<div>{props.educationData.map(data => (
 <div key={data.id} className="grid grid-cols-2 gap-3 shadow-md dark:shadow-black/40 lg:w-[70%] items-center border-l-8 rounded-md mb-6 border-[#1a73e8]  pl-3 pb-3 ">
                         
      <span className="text-xl ">Institution:</span>
