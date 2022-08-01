@@ -1,6 +1,6 @@
 import { React, useContext } from "react";
 import ThemeContext from "../Context/ThemeContext";
-import AppContext from "../Context/Context";
+import AppContext from "../Context/SideBarContext";
 
 function Appbar() {
   const { openSidebar } = useContext(AppContext);

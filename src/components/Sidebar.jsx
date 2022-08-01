@@ -1,12 +1,12 @@
 import { React, useContext } from "react";
 import { NavLink } from "react-router-dom";
-import AppContext from "../Context/Context";
+import SideBarContext from "../Context/SideBarContext";
 
 function Sidebar() {
 
 const activelink = "lg:font-extrabold lg:border-l-4 lg:border-[#1a73e8]  "
   
-const { isSidebarOpen, closeSidebar } = useContext(AppContext);
+const { isSidebarOpen, closeSidebar } = useContext(SideBarContext);
 
 const sideBarItems = [
 {id: 1,  name: "Profile",  icon: "person-circle-outline",  link: "/", },

@@ -7,24 +7,25 @@ import Education from './components/Education/Education'
 import Experience from './components/Experience/Experience'
 import Settings from './components/Settings/Settings'
 import { ThemeProvider } from './Context/ThemeContext'
-import { AppProvider } from './Context/Context';
+import { SideBarProvider } from './Context/SideBarContext';
 import Background from './components/Background'
-import { AboutTxt, EducationData } from './TestData'
+import { AboutTxt, educationData, experienceData } from './TestData'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 
 
-function App() {
+const App= () => {
 
   const [aboutText, setAboutText] = useState(AboutTxt)
-  const [educationData, setEducationData] = useState(EducationData)
+  const [educationInfo, setEducationInfo] = useState(educationData)
+  const [experienceInfo, setExperienceInfo] = useState(experienceData)
 
 
 
   return (
     <ThemeProvider>
-    <AppProvider>
+    <SideBarProvider>
       <Background>
       
     <Router>
@@ -43,7 +44,8 @@ function App() {
      element={
      <Profile 
      aboutText={aboutText} 
-     educationData={educationData}
+     educationData={educationInfo}
+     experienceData={experienceInfo}
      
     />} />
 
@@ -60,12 +62,20 @@ function App() {
      exact path='/Education' 
      element={
      <Education 
-     educationData={educationData}
-     setEducationData={setEducationData}
+     educationData={educationInfo}
+     setEducationData={setEducationInfo}
 
      />} />
 
-    <Route exact path='/experience' element={<Experience />} />
+    <Route 
+     exact path='/experience' 
+     element={
+     <Experience 
+     experienceData={experienceInfo}
+     setExperienceData={setExperienceInfo}
+
+     />} />
+
     <Route exact path='/settings' element={<Settings />} />
     </Routes>
     </main>
@@ -75,7 +85,7 @@ function App() {
   </div>
   </Router>
   </Background>
-  </AppProvider>
+  </SideBarProvider>
   </ThemeProvider>
   
   );

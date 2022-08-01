@@ -1,12 +1,12 @@
-import { React, useContext } from "react";  
-import AppContext from "../Context/Context";
+import { React } from "react";  
 
 
 
 
-function Profile(props){
 
-const { experienceDetails} =useContext(AppContext)
+const Profile = (props) => {
+
+
 
 return(
 <div className=" ">
@@ -66,7 +66,7 @@ return(
 
 <div className="p-3">
      <h1  className="text-2xl mb-3 font-bold">Eperience</h1>
-     {experienceDetails.map((details)=>{
+     {props.experienceData.map((details)=>{
 return(
 <div key={details.id}>
                    

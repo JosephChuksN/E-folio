@@ -1,13 +1,14 @@
-import { React, useState, useContext} from  "react";
-import AppContext from "../../Context/Context";
+import { React, useState } from  "react";
 
 
 
-function EditExperience({data, showModal}){
 
-   const {editExperience} = useContext(AppContext)
+const EditExperience = ({data, experienceData, setExperienceData, showModal}) => {
+
+   
 
    const id = data.id
+
    const [company, setCompany] = useState(data.company)
    const [Role, setRole] = useState(data.Role)
    const [jobDescription, setDescription] = useState(data.jobDescription)
@@ -15,6 +16,11 @@ function EditExperience({data, showModal}){
    const [endDate, setEndDate] = useState(data.endDate)
 
   const editedExperience = {id, company, Role, jobDescription, startDate, endDate}
+
+const editExperience = (id, editedExperience) => {
+  setExperienceData(experienceData.map(details => (details.id === id ? editedExperience : details)))
+}
+
 const handleSave = (e) => {
  e.preventDefault()
  editExperience(id, editedExperience)

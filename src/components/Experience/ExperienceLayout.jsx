@@ -1,15 +1,17 @@
-import { React, useState, useContext } from "react";
+import { React, useState } from "react";
 import EditExperience from "./EditExperience";
-import AppContext from "../../Context/Context";
 import { FaEllipsisH, FaTimesCircle, FaPen, FaTrash } from "react-icons/fa"
 
 
-function ExperienceEdit({details}){
+const ExperienceLayout = ({ details, experienceData, setExperienceData }) => {
    
-  const {deleteExperience} = useContext(AppContext)
-
+  const id = details.id
    const [showModal, setShowModal] = useState(false);
    const [showIcon, setShowIcon] = useState(false);
+   
+   const handleDelete = () =>{
+    setExperienceData(experienceData.filter(details => (details.id !== id)))
+   }
 
 return(
 <>
@@ -18,7 +20,7 @@ return(
      <div className="flex justify-between">
          <span className="">{`${details.startDate} - ${details.endDate}`}</span>
          <div className="flex gap-5 items-center P-1">
-           <span onClick={()=> deleteExperience(details.id)}  className={`flex justify-center items-center rounded-full w-7 h-7 hover:bg-slate-600/10  dark:hover:bg-gray-50/20 ${showIcon ? "block" : "hidden"}`}><FaTrash /></span>
+           <span onClick={handleDelete}  className={`flex justify-center items-center rounded-full w-7 h-7 hover:bg-slate-600/10  dark:hover:bg-gray-50/20 ${showIcon ? "block" : "hidden"}`}><FaTrash /></span>
            <span onClick={() => setShowModal(true)}   className={`flex justify-center items-center rounded-full w-7 h-7 hover:bg-slate-600/10  dark:hover:bg-gray-50/20 ${showIcon ? "block" : "hidden"}`}><FaPen /></span>
            <span onClick={()=> setShowIcon(!showIcon)}  className="flex justify-center items-center rounded-full w-7 h-7 hover:bg-slate-600/10  dark:hover:bg-gray-50/20 " >{showIcon ? <FaTimesCircle /> : <FaEllipsisH />}</span>
          </div>
@@ -61,7 +63,13 @@ return(
                 </div>
                 {/*body*/}
                 <div className="relative  lg:p-6 p-4 flex-auto">
-                  <EditExperience data={details} showModal={setShowModal} />
+                  <EditExperience 
+                  data={details} 
+                  experienceData={experienceData}
+                  setExperienceData={setExperienceData}
+                  showModal={setShowModal}
+                  
+                  />
                 </div>
                 {/*footer*/}
               </div>
@@ -76,4 +84,4 @@ return(
 
 )
 }
-export default ExperienceEdit;
+export default ExperienceLayout;

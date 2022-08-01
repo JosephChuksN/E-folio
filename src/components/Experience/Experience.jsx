@@ -1,10 +1,9 @@
-import { React, useState, useContext } from "react"
-import AppContext from "../../Context/Context";
+import { React, useState} from "react"
 import AddNewExperience from "./AddNewExperience";
-import ExperienceEdit from "./ExperienceEdit";
+import ExperienceLayout from "./ExperienceLayout";
 
-function Experience(){
-const{ experienceDetails } = useContext(AppContext)
+const Experience = (props) => {
+
 const [showModal, setShowModal] = useState(false);
   
 return(
@@ -22,10 +21,16 @@ return(
           </button>
        </div>
 <div className='mt-24 lg:mt-0 text-gray-100 lg:w-3/4'>{      
-        experienceDetails.map((data)=>{
+        props.experienceData.map((data)=>{
         return(
 
-         <ExperienceEdit details={data}  key={data.id} />
+         <ExperienceLayout
+         key={data.id}
+         details={data}  
+         experienceData={props.experienceData}
+         setExperienceData={props.setExperienceData}
+
+         />
          )
         })
         }</div>
@@ -51,7 +56,10 @@ return(
                 </div>
                 {/*body*/}
                 <div className="relative lg:p-6 p-4 flex-auto">
-                 <AddNewExperience showModal={setShowModal}/>
+                 <AddNewExperience 
+                 experienceData={props.experienceData}
+                 setExperienceData={props.setExperienceData}
+                 showModal={setShowModal}/>
                 </div>
                 {/*footer*/}
               

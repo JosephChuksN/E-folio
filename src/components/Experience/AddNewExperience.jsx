@@ -1,14 +1,20 @@
-import { React, useState, useContext} from  "react";
-import AppContext from "../../Context/Context";
+import { React, useState } from  "react";
+import { v4 as uuidv4 } from 'uuid';
 
 
 
-function AddNewExperience({showModal}){
 
-   const {addExperience} = useContext(AppContext)
+const AddNewExperience  = ({experienceData, setExperienceData, showModal}) => {
+
+   
    const [newExperiennce, setNewExperience] = useState({id:"", company:"", Role:"", jobDescription:"", startDate:"", endDate:""})
 
    const {company, Role, jobDescription, startDate, endDate} = newExperiennce
+
+   const addExperience =(company, Role, jobDescription, startDate, endDate)=>{
+    setExperienceData([...experienceData, {id:uuidv4(), company, Role, jobDescription, startDate, endDate}])
+  }
+
 
    const handleInputChange = (e) =>{
     const { name, value } = e.target
