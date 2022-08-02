@@ -3,9 +3,9 @@ import { randFullName, randCity, randJobTitle, randAvatar } from '@ngneat/falso'
    
 
 var fullName = randFullName()
-var avatar = randAvatar()
+
  
-const user = { fullName: fullName, city: randCity(), jobTitle: randJobTitle(), profileImg: avatar };
+const user = { fullName: fullName, city: randCity(), jobTitle: randJobTitle(), profileImg: randAvatar() };
 
 const AboutText = () => {
     var txt = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a est lacus. In at aliquet odio. Proin quis mi pulvinar, pharetra lorem   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a est lacus. In at aliquet odio. Proin quis mi pulvinar, pharetra lorem placerat ultrices eget nec metus. In est nibh, facilisis accumsan tincidunt id, cursus condimentum nunc"

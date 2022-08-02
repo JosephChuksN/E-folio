@@ -4,6 +4,7 @@ import { React } from "react";
 
 
 
+
 const Profile = (props) => {
 
 
@@ -15,7 +16,10 @@ return(
 
 <div className="translate-y-20   mb-28 ">
 
-<div className="mx-3"><img className="lg:w-40 lg:h-40 w-32 h-32 rounded-full " src={props.user.profileImg} alt="" /></div>
+<div className="mx-3">
+     <div className="lg:w-40 lg:h-40 w-32 h-32 rounded-full bg-no-repeat bg-cover flex items-center" style={{backgroundImage: `url(${props.user.profileImg})`}}>
+      </div>
+</div>
 <div className=" flex  flex-col mt-5 pl-3">
 
      <h1 className="text-xl font-bold break-words">{props.user.fullName}</h1>
