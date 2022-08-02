@@ -42,7 +42,7 @@ return(
     ref={upLoadInput}
     onChange={handleChange}
     accept="image/*"
-    capture
+    
     
     />
     </div>
