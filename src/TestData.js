@@ -8,7 +8,7 @@ var avatar = randAvatar()
 const user = { fullName: fullName, city: randCity(), jobTitle: randJobTitle(), profileImg: avatar };
 
 const AboutText = () => {
-    var txt = "A web developer with 3 years of experience in frontend developer  and a graduate of the University of maiduguri, based in Abuja Nigeria,  I am an enthusiast in learning new technologies relating to web development  always curious about solving problems relating to my field.  You will find me watching football matches and spending time with family when not coding."
+    var txt = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a est lacus. In at aliquet odio. Proin quis mi pulvinar, pharetra lorem   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a est lacus. In at aliquet odio. Proin quis mi pulvinar, pharetra lorem placerat ultrices eget nec metus. In est nibh, facilisis accumsan tincidunt id, cursus condimentum nunc"
     return txt
 }
 

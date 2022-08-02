@@ -30,7 +30,7 @@ const AddNewExperience  = ({experienceData, setExperienceData, showModal}) => {
 
 return(
 <>
-<form action="">
+<form onSubmit={handleAddExperience}>
 <div className="flex flex-col gap-3">
      <div className='flex flex-col'>
         <label htmlFor="">Company</label>
@@ -109,8 +109,7 @@ return(
                     Cancel
                   </button>
                   <button
-                  onClick={handleAddExperience}
-                    className="bg-blue-700 text-white active:bg-emerald-800 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="bg-blue-700 hover:bg-blue-800 text-white active:bg-emerald-800 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="submit"
                     
                   >

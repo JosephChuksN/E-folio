@@ -33,7 +33,7 @@ return(
 <div className="flex flex-col gap-3">
      <div className='flex flex-col'>
         <label htmlFor="">Company</label>
-         <input className='rounded-md border-gray-900/20 dark:border-slate-50/20  dark:bg-sky-300/[0.15]'
+         <input className='rounded-md border-gray-900/20 dark:border-slate-50/20  dark:bg-sky-300/[0.15] text-gray-900 dark:text-gray-50'
             type="text" 
             name="company" 
             id="" 
@@ -46,7 +46,7 @@ return(
      </div>
      <div className='flex flex-col'>
         <label htmlFor="">Role</label>
-         <input className='rounded-md border-gray-900/20  dark:border-slate-50/20  dark:bg-sky-300/[0.15]'
+         <input className='rounded-md border-gray-900/20  dark:border-slate-50/20  dark:bg-sky-300/[0.15] text-gray-900 dark:text-gray-50'
             type="text" 
             name="" 
             id="role" 
@@ -75,7 +75,7 @@ return(
      <div className='flex justify-between items-center'>
         <div className='flex flex-col'>
             <label htmlFor="">Start Date</label>
-            <input  className='rounded-md w-40 border-gray-900/20 dark:border-slate-50/20  dark:bg-sky-300/[0.15]'
+            <input  className='rounded-md w-40 border-gray-900/20 dark:border-slate-50/20  dark:bg-sky-300/[0.15] text-gray-900 dark:text-gray-50'
             type="month" 
             name="startDate" 
             id="" 
@@ -87,7 +87,7 @@ return(
         </div>
         <div className='flex flex-col'>
             <label htmlFor="">End Date</label>
-            <input  className='rounded-md w-40 border-gray-900/20 dark:border-slate-50/20  dark:bg-sky-300/[0.15]'
+            <input  className='rounded-md w-40 border-gray-900/20 dark:border-slate-50/20  dark:bg-sky-300/[0.15] text-gray-900 dark:text-gray-50'
             type="month" 
             name="endDate" 
             id="" 
