@@ -102,14 +102,14 @@ return(
  </div>
  <div className="flex items-center justify-end px-0 p-6 mt-6 gap-5 rounded-b">
                   <button
-                    className="text-white bg-red-500/70  uppercase px-6 py-3 hover:bg-red-600 rounded text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className=" text-gray-400 background-transparent hover:bg-gray-400 hover:text-white text-sm border-2 border-gray-400 uppercase px-6 py-3  rounded  outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                    onClick={() =>showModal(false)}
                   >
                     Cancel
                   </button>
                   <button
-                    className="bg-blue-700 hover:bg-blue-800 text-white active:bg-emerald-800 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="bg-blue-700 hover:bg-blue-800 text-white active:bg-emerald-800 border-2 border-blue-700 uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="submit"
                     
                   >

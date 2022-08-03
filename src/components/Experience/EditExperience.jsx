@@ -101,7 +101,7 @@ return(
  </div>
  <div className="flex items-center justify-end px-0 p-6 mt-6 gap-5 rounded-b">
                   <button
-                    className="text-white bg-red-500/70  uppercase px-6 py-3 hover:bg-red-600 rounded text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="text-gray-400 background-transparent hover:bg-gray-400 hover:text-white  border-2 border-gray-400  uppercase px-6 py-3 rounded text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                    onClick={() =>showModal(false)}
                   >
@@ -109,7 +109,7 @@ return(
                   </button>
                   <button
                   onClick={handleSave}
-                    className="bg-blue-700 text-white active:bg-emerald-800 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="bg-blue-700 text-white border-2 border-blue-700 hover:bg-blue-800  active:bg-emerald-800 uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="submit"
                     
                   >

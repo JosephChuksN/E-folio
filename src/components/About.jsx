@@ -33,7 +33,7 @@ function About({aboutText, setAboutText}) {
         <button className=" text-gray-400 background-transparent hover:bg-gray-400 hover:text-white border-2 border-gray-400 rounded  uppercase px-6 py-2  outline-none focus:outline-none mr-1  ease-linear transition-all duration-150">
           <Link to="/">Cancel</Link>
         </button>
-        <button onClick={handleSave} className="bg-[#222222] dark:bg-[#1a73e8] py-2 uppercase px-6 hover:bg-blue-900 rounded text-white">
+        <button onClick={handleSave} className=" bg-[#1a73e8] py-2 uppercase px-6 hover:bg-blue-900 rounded active:bg-emerald-800 text-white">
          <Link to="/">Save</Link> 
         </button>
       </div>
