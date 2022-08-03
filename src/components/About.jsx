@@ -1,4 +1,5 @@
 import { React, useState} from "react";
+import { Link } from "react-router-dom"
 
 
 function About({aboutText, setAboutText}) {
@@ -29,11 +30,11 @@ function About({aboutText, setAboutText}) {
        
       />
       <div className="flex gap-5 justify-end lg:w-1/2 ">
-        <button className=" text-red-500 background-transparent  uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
-          Cancel
+        <button className=" text-gray-400 background-transparent hover:bg-gray-400 hover:text-white border-2 border-gray-400 rounded  uppercase px-6 py-2  outline-none focus:outline-none mr-1  ease-linear transition-all duration-150">
+          <Link to="/">Cancel</Link>
         </button>
         <button onClick={handleSave} className="bg-[#222222] dark:bg-[#1a73e8] py-2 uppercase px-6 hover:bg-blue-900 rounded text-white">
-          Save
+         <Link to="/">Save</Link> 
         </button>
       </div>
     </div>
