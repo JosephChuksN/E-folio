@@ -19,6 +19,7 @@ const AddNewExperience  = ({experienceData, setExperienceData, showModal}) => {
    const handleInputChange = (e) =>{
     const { name, value } = e.target
     setNewExperience({...newExperiennce, [name] : value})
+    console.log(e.target.value.tol)
    }
 
    

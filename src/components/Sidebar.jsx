@@ -4,7 +4,7 @@ import SideBarContext from "../Context/SideBarContext";
 
 function Sidebar() {
 
-const activelink = "lg:font-extrabold lg:border-l-4 lg:border-[#1a73e8]  "
+const activelink = "lg:font-extrabold lg:border-l-4 lg:border-[#1a73e8] text-[#1a73e8]"
   
 const { isSidebarOpen, closeSidebar } = useContext(SideBarContext);
 
@@ -29,7 +29,7 @@ return (
 
 <div className=" h-screen  ">
      <span>
-     <h1 className="text-gray-900 font-bold dark:text-gray-100 text-2xl p-2">
+     <h1 className="text-gray-900 font-bold dark:text-gray-100 text-2xl p-2 ">
            
          OnlineCv
 
@@ -51,7 +51,7 @@ return (
     <NavLink key={lists.id} to={lists.link}
     className={({ isActive }) => (isActive ? activelink : null)}>
      
-    <li  onClick={closeSidebar}   key={`${lists.id}_{lists.name}`}  className="flex dark:hover:bg-[#1e293b] hover:bg-slate-600/10 text-gray-900 dark:text-gray-100   text-xl p-3"  >
+    <li  onClick={closeSidebar}   key={`${lists.id}_{lists.name}`}  className="flex dark:hover:bg-[#1e293b] hover:bg-slate-600/10   text-xl p-3"  >
     <span className="mr-4 text-2xl">
 
           <ion-icon name={lists.icon}></ion-icon>
@@ -73,7 +73,7 @@ return (
     return (
     <NavLink key={lists.id} to={lists.link}  className={({ isActive }) => (  isActive ? activelink : null) }>
              
-    <li  onClick={closeSidebar}  key={`${lists.id}_{lists.name}`} className=" dark:hover:bg-[#1e293b] flex hover:bg-slate-600/10  text-gray-900 dark:text-gray-100   focus:text-sky-300 text-xl p-3">
+    <li  onClick={closeSidebar}  key={`${lists.id}_{lists.name}`} className=" dark:hover:bg-[#1e293b] flex hover:bg-slate-600/10     focus:text-sky-300 text-xl p-3">
     <span className="mr-4 text-2xl ">
 
           <ion-icon name={lists.icon}></ion-icon>
@@ -87,7 +87,7 @@ return (
 
 <ul className="mx-2 flex flex-col mt-2">
    <NavLink to="/settings" className={({ isActive }) => ( isActive ? activelink : null)}>
-   <li  onClick={closeSidebar}  className=" dark:hover:bg-[#1e293b]  flex hover:bg-slate-600/10  text-gray-900 dark:text-gray-100   focus:text-sky-300 text-xl p-3">
+   <li  onClick={closeSidebar}  className=" dark:hover:bg-[#1e293b]  flex hover:bg-slate-600/10    focus:text-sky-300 text-xl p-3">
     <span className="mr-4 text-2xl ">
 
           <ion-icon name="settings"></ion-icon>
