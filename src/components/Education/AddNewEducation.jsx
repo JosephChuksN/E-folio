@@ -80,14 +80,14 @@ function AddNewEducation({educationData, setEducationData, showModal}){
  </div>
  <div className="flex items-center gap-5 justify-end p-6 px-0 mt-6   rounded-b">
                   <button
-                    className="text-white bg-red-500/70  uppercase px-6 py-3 hover:bg-red-600 rounded text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="hover:text-white bg-transparent border-2 border-gray-400  uppercase px-6 py-3 hover:bg-gray-400 rounded text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => showModal(false)}
                   >
                     Cancel
                   </button>
                   <button
-                    className="bg-blue-700 text-white active:bg-blue-800 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="bg-blue-700 hover:bg-blue-800 text-white active:bg-emerald-800 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="submit"
                   >
                     Add
