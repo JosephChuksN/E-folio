@@ -16,7 +16,7 @@ const sideBarItemsSub = [
 {id: 1, name: "About", icon: "information-circle-outline", link: "/About", },
 {id: 2, name: "Education", icon: "school",  link: "/Education",   },
 {id: 3, name: "Experience", icon: "briefcase", link: "/experience",  },
-{id: 4, name: "Skills", icon: "cog", link: " ",  },
+{id: 4, name: "Skills", icon: "cog", link: "/skills",  },
       
 ];
 

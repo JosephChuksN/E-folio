@@ -5,6 +5,7 @@ import Profile from './components/Profile'
 import About from './components/About'
 import Education from './components/Education/Education'
 import Experience from './components/Experience/Experience'
+import Skills from './components/Skills/Skills'
 import Settings from './components/Settings/Settings'
 import { ThemeProvider } from './Context/ThemeContext'
 import { SideBarProvider } from './Context/SideBarContext';
@@ -75,6 +76,15 @@ const App= () => {
      <Experience 
      experienceData={experienceInfo}
      setExperienceData={setExperienceInfo}
+
+     />} />
+
+    <Route 
+     exact path='/skills' 
+     element={
+     <Skills
+     
+    
 
      />} />
 
