@@ -1,11 +1,12 @@
 import { v4 as uuidv4 } from 'uuid';
-import { randFullName, randCity, randJobTitle, randAvatar } from '@ngneat/falso';
+import { randFirstName, randLastName, randCity, randJobTitle, randAvatar, randEmail } from '@ngneat/falso';
    
 
-var fullName = randFullName()
+var firstName = randFirstName()
+
 
  
-const user = { fullName: fullName, city: randCity(), jobTitle: randJobTitle(), profileImg: randAvatar() };
+const user = { firstName: firstName, lastName: randLastName(), city: randCity(), jobTitle: randJobTitle(), profileImg: randAvatar(), email:randEmail()};
 
 const AboutText = () => {
     var txt = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a est lacus. In at aliquet odio. Proin quis mi pulvinar, pharetra lorem   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a est lacus. In at aliquet odio. Proin quis mi pulvinar, pharetra lorem placerat ultrices eget nec metus. In est nibh, facilisis accumsan tincidunt id, cursus condimentum nunc"

@@ -1,4 +1,5 @@
-import { React } from "react";  
+import { React, useState } from "react";  
+import ContactInfo from "./ContactInfo";
 
 
 
@@ -6,7 +7,7 @@ import { React } from "react";
 
 
 const Profile = (props) => {
-
+ const [showContactInfo, setShowContactInfo] = useState(false)
 
 
 return(
@@ -22,12 +23,13 @@ return(
 </div>
 <div className=" flex  flex-col mt-5 pl-3">
 
-     <h1 className="text-xl font-bold break-words">{props.user.fullName}</h1>
-     <p className=" dark:text-slate-400 ">{props.user.city}</p>
+     <h1 className="text-xl font-bold break-words mb-1">{`${props.user.firstName} ${props.user.lastName}`}</h1>
+     <span className="text-gray-900  inline  break-all dark:text-white mb-0.5 text-base">{props.user.jobTitle}</span>
+     
 
 </div>
 
-<div className="px-3  "><span className="text-gray-900 font-bold inline  break-all dark:text-white text-base">{props.user.jobTitle}</span></div>
+<div className="px-3 flex gap-2 "><p className=" dark:text-slate-400 ">{props.user.city}</p><hr className="w-0.5 h-0.5 rounded-full bg-black dark:bg-white flex items-center my-auto"/><span onClick={()=>setShowContactInfo(true)} className="text-[#1a73e8] hover:underline cursor-pointer">Contact info</span></div>
                     
 </div>
 
@@ -98,6 +100,7 @@ return(
 </div>
 
 </div>
+{showContactInfo ? <ContactInfo user={props.user} setShow={setShowContactInfo} /> : null }
 </div>
  )
 

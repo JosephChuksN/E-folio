@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Sidebar from './components/Sidebar'
 import Appbar from './components/Appbar'
-import Profile from './components/Profile'
+import Profile from './components/Profile/Profile'
 import About from './components/About'
 import Education from './components/Education/Education'
 import Experience from './components/Experience/Experience'
