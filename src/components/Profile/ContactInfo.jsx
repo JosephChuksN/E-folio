@@ -65,7 +65,7 @@ const ContactInfo = ({setShow, user}) => {
                 <span className="pr-2 pt-1 pl-1 text-xl"><FaUser /></span>
                 <div className="flex flex-col">
                     <span>Profile link</span>
-                    <span className="text-[#1a73e8]"><a href={`${user.firstName}${user.lastName}.onlinecv.org`}>{`${user.firstName}${user.lastName}.onlinecv.org`}</a></span>
+                    <span className="text-[#1a73e8]"><a href={`${user.firstName}${user.lastName}.onlinecv.org`}>{`onlinecv.org/in/${user.firstName.toLowerCase()}${user.lastName.toLowerCase()}`}</a></span>
                 </div>
             </div>
             <div className="flex gap-5">
