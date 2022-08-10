@@ -48,7 +48,7 @@ return(
       <span className="flex flex-col p-1 bg-slate-600/30 dark:bg-[#1e293b]  border-slate-50/20 border rounded-md">
                             
       <p className="pt-5 flex items-center gap-2 text-blue-700 dark:text-sky-400">Portfolio <ion-icon name="link"></ion-icon></p>
-      <span className="pt-5 flex items-center text-purple-700"><a href="https://nwosu-joseph-portfolio.vercel.app/">{props.user.fullName}<ion-icon name="link"></ion-icon></a></span>
+      <span className="pt-5 flex items-center text-purple-700"><a href=" " target="_blank" rel="noreferrer" >{`onlinecv.org/in/${props.user.firstName.toLowerCase()}${props.user.lastName.toLowerCase()}`}<ion-icon name="link"></ion-icon></a></span>
       </span>
 
 </div>
