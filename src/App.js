@@ -10,7 +10,7 @@ import Settings from './components/Settings/Settings'
 import { ThemeProvider } from './Context/ThemeContext'
 import { SideBarProvider } from './Context/SideBarContext';
 import Background from './components/Background'
-import { user, AboutTxt, educationData, experienceData } from './TestData'
+import { user, AboutTxt, educationData, experienceData, SkillsData } from './TestData'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
@@ -22,6 +22,7 @@ const App= () => {
   const [aboutText, setAboutText] = useState(AboutTxt)
   const [educationInfo, setEducationInfo] = useState(educationData)
   const [experienceInfo, setExperienceInfo] = useState(experienceData)
+  const [skills, setSkills] = useState(SkillsData)
 
 
 
@@ -49,6 +50,7 @@ const App= () => {
      aboutText={aboutText} 
      educationData={educationInfo}
      experienceData={experienceInfo}
+     skills={skills}
      
     />} />
 
@@ -78,14 +80,13 @@ const App= () => {
      setExperienceData={setExperienceInfo}
 
      />} />
-
     <Route 
      exact path='/skills' 
      element={
-     <Skills
+     <Skills 
+     skills={skills}
+     setSkills={setSkills}
      
-    
-
      />} />
 
     <Route 
@@ -96,7 +97,12 @@ const App= () => {
      setUser={setDummyUser}
      
      />} />
+
+   
+
     </Routes>
+
+    
     </main>
    
     </div>

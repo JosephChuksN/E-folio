@@ -38,5 +38,8 @@ const experienceData = [
     {id:uuidv4(), company:"UNIR, Universidad Internacional de la Rioja", Role:"Front-end designer & Web designer", jobDescription:"Development and testing of corporate mailings, landings, and corporate banners design.", startDate:"2021-07-1", endDate:"2021-11-21",}
    ]
 
+ const SkillsData = [{id:uuidv4(), skill:"JavaScript"}, {id:uuidv4(), skill:"ReactJs"}, {id:uuidv4(), skill:"LeaderShip"}, {id:uuidv4(), skill:"Teamwork"}, {id:uuidv4(), skill:"Teamwork"}]
+
 export const AboutTxt = AboutText;
-export {educationData, experienceData, user};
+export {educationData, experienceData, user, SkillsData};
+

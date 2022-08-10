@@ -100,10 +100,15 @@ return(
 <div className="p-3">
 <h1  className="text-2xl mb-3 font-bold">Skills</h1>
     <div className=" grid lg:grid-cols-4 grid-cols-3 gap-3 items-center text-center">
-    <span className="p-2 bg-[#1a73e8] rounded">JavaScript</span>
-    <span className="p-2 bg-[#1a73e8] rounded">ReactJs</span>
-    <span className="p-2 bg-[#1a73e8] rounded">LeaderShip</span>
-    <span className="p-2 bg-[#1a73e8] rounded">Teamwork</span>
+     {
+          props.skills.map((data, index) =>(
+               <span key={data.id} className="p-2 bg-[#1a73e8] rounded">{data.skill}</span>
+          ))
+   
+
+    }
+   
+    
     </div>
 </div>
 
