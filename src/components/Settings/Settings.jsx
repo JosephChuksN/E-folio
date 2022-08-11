@@ -11,9 +11,9 @@ return(
     <>
       <>
           <div
-            className="lg:pt-14 pt-14 justify-center items-center text-gray-900 dark:text-gray-100 flex overflow-x-hidden overflow-y-auto fixed inset-0  outline-none focus:outline-none"
+            className="lg:pt-14 bg-gray-100 dark:bg-[#2d3436] dark:bg-gradient-to-r from-[#0d1114] to-[#0c0f11] transition-all h-screen pt-14 justify-center items-center text-gray-900 dark:text-gray-100 flex overflow-x-hidden overflow-y-auto fixed inset-0  outline-none focus:outline-none"
           >
-            <div className="relative w-full lg:w-3/4 my-6 lg:mx-auto mx-2 shadow-lg shadow-black/60 bg-gray-100 dark:bg-[#1e293b]/80  rounded-md max-w-3xl">
+            <div className="relative w-full lg:w-3/4 my-6 lg:mx-auto mx-2 shadow-lg shadow-black/60 bg-gray-100 dark:bg-[#0c0f11]  rounded-md max-w-3xl">
               {/*content*/}
               <div className="border-0 rounded-lg  relative flex flex-col w-full  outline-none focus:outline-none">
                 {/*header*/}

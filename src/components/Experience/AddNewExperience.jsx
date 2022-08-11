@@ -35,7 +35,7 @@ return(
 <div className="flex flex-col gap-3">
      <div className='flex flex-col'>
         <label htmlFor="">Company</label>
-         <input className='rounded-md border-gray-900/20 dark:border-slate-50/20  dark:bg-sky-300/[0.15]'
+         <input className='rounded-md border-gray-900/20 dark:border-slate-50/20  dark:bg-[#0c0f11]'
             type="text" 
             name="company" 
             id="" 
@@ -48,7 +48,7 @@ return(
      </div>
      <div className='flex flex-col'>
         <label htmlFor="">Role</label>
-         <input className='rounded-md border-gray-900/20  dark:border-slate-50/20  dark:bg-sky-300/[0.15]'
+         <input className='rounded-md border-gray-900/20  dark:border-slate-50/20  dark:bg-[#0c0f11]'
             type="text" 
             name="Role" 
             id="role" 
@@ -61,7 +61,7 @@ return(
      </div>
      <div className='flex flex-col'>
         <label htmlFor="">Job Description</label>
-         <textarea  className=" resize-none outline-none text-justify indent-1   border-gray-900/20  dark:bg-sky-300/[0.15] dark:border-gray-100/20 text-gray-900 dark:text-gray-50  rounded "
+         <textarea  className=" resize-none outline-none text-justify indent-1   border-gray-900/20  dark:bg-[#0c0f11] dark:border-gray-100/20 text-gray-900 dark:text-gray-50  rounded "
          name="jobDescription" 
          id="" 
          value={jobDescription}
@@ -77,7 +77,7 @@ return(
      <div className='flex justify-between items-center'>
         <div className='flex flex-col'>
             <label htmlFor="">Start Date</label>
-            <input  className='rounded-md w-40 border-gray-900/20 dark:border-slate-50/20  dark:bg-sky-300/[0.15]'
+            <input  className='rounded-md w-40 border-gray-900/20 dark:border-slate-50/20  dark:bg-[#0c0f11]'
             type="month" 
             name="startDate" 
             id="" 
@@ -89,7 +89,7 @@ return(
         </div>
         <div className='flex flex-col'>
             <label htmlFor="">End Date</label>
-            <input  className='rounded-md w-40 border-gray-900/20 dark:border-slate-50/20  dark:bg-sky-300/[0.15]'
+            <input  className='rounded-md w-40 border-gray-900/20 dark:border-slate-50/20  dark:bg-[#0c0f11]'
             type="month" 
             name="endDate" 
             id="" 

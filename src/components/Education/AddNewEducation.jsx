@@ -33,7 +33,7 @@ function AddNewEducation({educationData, setEducationData, showModal}){
 <form action="" onSubmit={handleAddEducation}  className='flex flex-col gap-5'>
  <div className='flex flex-col'>
     <label htmlFor=""  className='text-xl'>Institution</label>
-    <input className='rounded-md border-[1px] border-gray-900/20 dark:border-slate-50/20  dark:bg-sky-300/[0.15]'
+    <input className='rounded-md border-[1px] border-gray-900/20 dark:border-slate-50/20  dark:bg-[#0c0f11] '
     type="text" 
     name="institution"
     value={institution} 
@@ -44,7 +44,7 @@ function AddNewEducation({educationData, setEducationData, showModal}){
  </div>
  <div  className='flex flex-col'>
     <label htmlFor=""  className='text-xl'>Course</label>
-    <input  className='rounded-md  border-gray-900/20 dark:border-slate-50/20 dark:bg-sky-300/[0.15]'
+    <input  className='rounded-md  border-gray-900/20 dark:border-slate-50/20 dark:bg-[#0c0f11] '
     type="text"
     name="Degree" 
     value={Degree}
@@ -56,7 +56,7 @@ function AddNewEducation({educationData, setEducationData, showModal}){
  <div className='flex justify-between items-center'>
  <div  className='flex flex-col'>
     <label htmlFor=""  className='text-xl'>Start Date</label>
-    <input  className='rounded-md  border-[1px] border-gray-900/20 dark:border-slate-50/20  dark:bg-sky-300/[0.15] w-40 lg:w-auto'
+    <input  className='rounded-md  border-[1px] border-gray-900/20 dark:border-slate-50/20  dark:bg-[#0c0f11]  w-40 lg:w-auto'
     type="month" 
     name="startDate"
     value={startDate}
@@ -68,7 +68,7 @@ function AddNewEducation({educationData, setEducationData, showModal}){
  
  <div  className='flex flex-col'>
     <label htmlFor=""  className='text-xl'>End Date</label>
-    <input  className='rounded-md w-40 border-[1px] border-gray-900/20 dark:border-slate-50/20 dark:bg-sky-300/[0.15] lg:w-auto'
+    <input  className='rounded-md w-40 border-[1px] border-gray-900/20 dark:border-slate-50/20 dark:bg-[#0c0f11]  lg:w-auto'
     type="month" 
     name="endDate"
     value={endDate}

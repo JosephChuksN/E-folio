@@ -31,7 +31,7 @@ function EditEducation({details, educationData, setEducationData, showModal}){
  <div className='flex flex-col'>
 
     <label htmlFor="" className='text-xl'>Institution</label>
-    <input className='rounded-md border-gray-900/20  dark:border-slate-50/20  dark:bg-sky-300/[0.15]'
+    <input className='rounded-md border-gray-900/20  dark:border-slate-50/20  dark:bg-[#0c0f11] '
     type="text" 
     name="institution"
     value={institution}
@@ -44,7 +44,7 @@ function EditEducation({details, educationData, setEducationData, showModal}){
  <div  className='flex flex-col'>
 
     <label htmlFor="" className='text-xl'>Course</label>
-    <input className='rounded-md border-gray-900/20  dark:border-slate-50/20  dark:bg-sky-300/[0.15]'
+    <input className='rounded-md border-gray-900/20  dark:border-slate-50/20  dark:bg-[#0c0f11] '
     type="text"
     name="degree" 
     value={Degree}
@@ -58,7 +58,7 @@ function EditEducation({details, educationData, setEducationData, showModal}){
  <div  className='flex flex-col'>
 
     <label htmlFor="" className='text-xl'>Start Date</label>
-    <input  className='rounded-md w-40  border-gray-900/20  dark:border-slate-50/20  dark:bg-sky-300/[0.15]'
+    <input  className='rounded-md w-40  border-gray-900/20  dark:border-slate-50/20  dark:bg-[#0c0f11] '
     type="month" 
     name="startDate"
     value={startDate}
@@ -72,7 +72,7 @@ function EditEducation({details, educationData, setEducationData, showModal}){
  <div  className='flex flex-col'>
 
     <label htmlFor="" className='text-xl'>End Date</label>
-    <input  className='rounded-md w-40   border-gray-900/20  dark:border-slate-50/20  dark:bg-sky-300/[0.15]'
+    <input  className='rounded-md w-40   border-gray-900/20  dark:border-slate-50/20  dark:bg-[#0c0f11] '
     type="month" 
     name="endDate"
     value={endDate}

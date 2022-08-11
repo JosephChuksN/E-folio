@@ -22,7 +22,7 @@ const sideBarItemsSub = [
 
 return (
 <div
-  className={` overflow-y-auto transition-all bg-gray-100 dark:bg-gray-900  border-slate-50/20 border-r duration-500 ease-in-out z-50 ${
+  className={` overflow-y-auto bg-gray-100 dark:bg-[#2d3436] dark:bg-gradient-to-r from-[#0d1114] to-[#0c0f11] transition-all border-slate-50/20 border-r duration-500 ease-in-out z-50 ${
   isSidebarOpen ? "translate-x-0" : "-translate-x-72 "
   } lg:w-[20%] w-72 fixed lg:translate-x-0 lg:border-r border-slate-400 mt-0 `}
   >
@@ -51,7 +51,7 @@ return (
     <NavLink key={lists.id} to={lists.link}
     className={({ isActive }) => (isActive ? activelink : null)}>
      
-    <li  onClick={closeSidebar}   key={`${lists.id}_{lists.name}`}  className="flex dark:hover:bg-[#1e293b] hover:bg-slate-600/10   text-xl p-3"  >
+    <li  onClick={closeSidebar}   key={`${lists.id}_{lists.name}`}  className="flex dark:hover:bg-[#ffffff0f] hover:bg-slate-600/10   text-xl p-3"  >
     <span className="mr-4 text-2xl">
 
           <ion-icon name={lists.icon}></ion-icon>
@@ -73,7 +73,7 @@ return (
     return (
     <NavLink key={lists.id} to={lists.link}  className={({ isActive }) => (  isActive ? activelink : null) }>
              
-    <li  onClick={closeSidebar}  key={`${lists.id}_{lists.name}`} className=" dark:hover:bg-[#1e293b] flex hover:bg-slate-600/10     focus:text-sky-300 text-xl p-3">
+    <li  onClick={closeSidebar}  key={`${lists.id}_{lists.name}`} className=" dark:hover:bg-[#ffffff0f] flex hover:bg-slate-600/10     focus:text-sky-300 text-xl p-3">
     <span className="mr-4 text-2xl ">
 
           <ion-icon name={lists.icon}></ion-icon>
@@ -87,7 +87,7 @@ return (
 
 <ul className="mx-2 flex flex-col mt-2">
    <NavLink to="/settings" className={({ isActive }) => ( isActive ? activelink : null)}>
-   <li  onClick={closeSidebar}  className=" dark:hover:bg-[#1e293b]  flex hover:bg-slate-600/10    focus:text-sky-300 text-xl p-3">
+   <li  onClick={closeSidebar}  className=" dark:hover:bg-[#ffffff0f]  flex hover:bg-slate-600/10    focus:text-sky-300 text-xl p-3">
     <span className="mr-4 text-2xl ">
 
           <ion-icon name="settings"></ion-icon>
