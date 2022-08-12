@@ -19,7 +19,7 @@ function About({aboutText, setAboutText}) {
           A great bio is unique and relatable.
         </h1>
       <textarea
-        className=" resize-none outline-none text-justify indent-1 lg:w-1/2 bg-gray-100  border-gray-900/20 dark:bg-gray-900 dark:border-gray-100/20 text-gray-900 dark:text-gray-50  rounded "
+        className=" resize-none outline-none text-justify indent-1 lg:w-1/2 bg-gray-100  border-gray-900/20 dark:bg-[#0c0f11]  dark:border-gray-100/20 text-gray-900 dark:text-gray-50  rounded "
         name="textBoxValue"
         value={textBoxValue}
         id=""
@@ -30,12 +30,12 @@ function About({aboutText, setAboutText}) {
        
       />
       <div className="flex gap-5 justify-end lg:w-1/2 ">
-        <button className=" text-gray-400 background-transparent hover:bg-gray-400 hover:text-white border-2 border-gray-400 rounded  uppercase px-6 py-2  outline-none focus:outline-none mr-1  ease-linear transition-all duration-150">
-          <Link to="/">Cancel</Link>
-        </button>
-        <button onClick={handleSave} className=" bg-[#1a73e8] py-2 uppercase px-6 hover:bg-blue-900 rounded active:bg-emerald-800 text-white">
-         <Link to="/">Save</Link> 
-        </button>
+      <Link to="/"><button className=" text-gray-400 background-transparent hover:bg-gray-400 hover:text-white border-2 border-gray-400 rounded  uppercase px-6 py-2  outline-none focus:outline-none mr-1  ease-linear transition-all duration-150">
+          Cancel
+        </button></Link>
+        <Link to="/"><button onClick={handleSave} className=" bg-[#1a73e8] py-2 uppercase px-6 hover:bg-blue-900 rounded active:bg-emerald-800 text-white">
+         Save
+        </button></Link> 
       </div>
     </div>
   );

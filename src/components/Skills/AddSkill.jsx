@@ -40,7 +40,7 @@ const handleAddSkill = (e) =>{
        htmlFor="fullname">
       Add Skill 
       </label>
-      <button type="submit" className="w-24 px-2 py-1 bg-[#1a73e8] hover:bg-blue-800  active:bg-emerald-800 rounded shadow hover:shadow-lg outline-none focus:outline-none ease-linear transition-all duration-150">Add</button>
+      <button type="submit" className="w-24 px-2 py-1 bg-[#1a73e8] hover:bg-blue-800  active:bg-emerald-800 rounded shadow hover:shadow-lg outline-none focus:outline-none ease-linear font-bold transition-all duration-150">ADD</button>
       
         </div>
         </form>
