@@ -97,7 +97,7 @@ return(
   </div>
 
    <div className="flex justify-end gap-5">
-   <button  className="hover:bg-gray-400 bg-transparent border-2 border-gray-400  text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+   <button  className="hover:bg-gray-400 bg-transparent border-2 border-gray-400 text-gray-400 hover:text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
    type="submit"
    ><Link to="/">Not Now</Link></button>
    
