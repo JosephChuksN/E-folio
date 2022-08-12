@@ -1,12 +1,24 @@
-import { React, useContext } from "react";
+import { React, useContext, useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import SideBarContext from "../Context/SideBarContext";
 
 function Sidebar() {
+const sideBar = useRef(null)
+const { isSidebarOpen, closeSidebar,  setIsSidebarOpen } = useContext(SideBarContext);
+
+const handleOutsideClick = (e) =>{
+    if(sideBar.current && !sideBar.current.contains(e.target)){
+        setIsSidebarOpen(false)
+    }
+}
+
+useEffect(()=>{
+    document.addEventListener("mousedown", handleOutsideClick)
+    return ()=>{document.removeEventListener("mousedown", handleOutsideClick)}
+}, [])
 
 const activelink = "lg:font-extrabold lg:border-l-4 lg:border-[#1a73e8] text-[#1a73e8]"
   
-const { isSidebarOpen, closeSidebar } = useContext(SideBarContext);
 
 const sideBarItems = [
 {id: 1,  name: "Profile",  icon: "person-circle-outline",  link: "/", },
@@ -21,7 +33,7 @@ const sideBarItemsSub = [
 ];
 
 return (
-<div
+<div ref={sideBar}
   className={` overflow-y-auto bg-gray-100 dark:bg-[#2d3436] dark:bg-gradient-to-r from-[#0d1114] to-[#0c0f11] transition-all border-slate-50/20 border-r duration-500 ease-in-out z-50 ${
   isSidebarOpen ? "translate-x-0" : "-translate-x-72 "
   } lg:w-[20%] w-72 fixed lg:translate-x-0 lg:border-r border-slate-400 mt-0 `}
