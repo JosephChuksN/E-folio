@@ -66,8 +66,10 @@ return(
      <span className="">{data.institution}</span>
      <span className="text-xl">Course:</span>
      <span className="">{data.Degree}</span>
+     <span className="text-xl">Certification:</span>
+     <span className="">{data.certification}</span>
      <span className="text-xl ">Date:</span>
-     <span className="">{`${data.startDate} - ${data.endDate}`}</span>
+     <span className="text-sm">{`${data.startDate} - ${data.endDate}`}</span>
                     
 </div>
 ))}</div>

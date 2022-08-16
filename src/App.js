@@ -32,8 +32,8 @@ const App= () => {
       <Background>
       
     <Router>
-    <div className='lg:flex  '>
-      
+    <div className='lg:flex '>
+    
     <Sidebar />
     
     <div className='lg:w-[80%] lg:ml-[307px]'>

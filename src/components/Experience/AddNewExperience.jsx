@@ -78,7 +78,7 @@ return(
         <div className='flex flex-col'>
             <label htmlFor="">Start Date</label>
             <input  className='rounded-md w-40 border-gray-900/20 dark:border-slate-50/20  dark:bg-[#0c0f11]'
-            type="month" 
+            type="date" 
             name="startDate" 
             id="" 
             value={startDate}
@@ -90,7 +90,7 @@ return(
         <div className='flex flex-col'>
             <label htmlFor="">End Date</label>
             <input  className='rounded-md w-40 border-gray-900/20 dark:border-slate-50/20  dark:bg-[#0c0f11]'
-            type="month" 
+            type="date" 
             name="endDate" 
             id="" 
             value={endDate}

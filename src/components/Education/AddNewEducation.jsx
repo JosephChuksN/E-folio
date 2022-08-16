@@ -57,7 +57,7 @@ function AddNewEducation({educationData, setEducationData, showModal}){
  <div  className='flex flex-col'>
     <label htmlFor=""  className='text-xl'>Start Date</label>
     <input  className='rounded-md  border-[1px] border-gray-900/20 dark:border-slate-50/20  dark:bg-[#0c0f11]  w-40 lg:w-auto'
-    type="month" 
+    type="date" 
     name="startDate"
     value={startDate}
     onChange={(e) => handleInputChange(e)} 
@@ -69,7 +69,7 @@ function AddNewEducation({educationData, setEducationData, showModal}){
  <div  className='flex flex-col'>
     <label htmlFor=""  className='text-xl'>End Date</label>
     <input  className='rounded-md w-40 border-[1px] border-gray-900/20 dark:border-slate-50/20 dark:bg-[#0c0f11]  lg:w-auto'
-    type="month" 
+    type="date" 
     name="endDate"
     value={endDate}
     onChange={(e) => handleInputChange(e)} 

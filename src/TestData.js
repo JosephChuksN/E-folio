@@ -18,16 +18,18 @@ const educationData = [
    { id: uuidv4(),
     institution: "UNIMAID",
     Degree: "ANATOMY",
-    startDate: "2019-05",
-    endDate: "2020-05",
+    certification: "Bsc.",
+    startDate: "2019-05-11",
+    endDate: "2020-05-22",
   },
   
   {
     id: uuidv4(),
     institution: "UMUDIKE",
     Degree: "BIOLOGY",
-    startDate: "2021-08",
-    endDate: "2021-11",
+    certification: "Hnd.",
+    startDate: "2021-08-12",
+    endDate: "2021-11-14",
   },
 
 ]
@@ -35,7 +37,7 @@ const educationData = [
 
 const experienceData = [
     {id:uuidv4(), company:"Openfinance", Role:"Front-end & UI Developer", jobDescription:"Development of corporate websites, newsletters,landings, pure HTML layout, CSS and Javascript", startDate:"2021-07-21", endDate:"2021-11-21"},
-    {id:uuidv4(), company:"UNIR, Universidad Internacional de la Rioja", Role:"Front-end designer & Web designer", jobDescription:"Development and testing of corporate mailings, landings, and corporate banners design.", startDate:"2021-07-1", endDate:"2021-11-21",}
+    {id:uuidv4(), company:"UNIR, Universidad Internacional de la Rioja", Role:"Front-end designer & Web designer", jobDescription:"Development and testing of corporate mailings, landings, and corporate banners design.", startDate:"2021-07-01", endDate:"2021-11-21",}
    ]
 
  const SkillsData = [{id:uuidv4(), skill:"JavaScript"}, {id:uuidv4(), skill:"ReactJs"}, {id:uuidv4(), skill:"LeaderShip"}, {id:uuidv4(), skill:"Teamwork"}, ]

@@ -1,6 +1,7 @@
 import { React, useContext } from "react";
 import ThemeContext from "../Context/ThemeContext";
 import AppContext from "../Context/SideBarContext";
+import {  FaMoon } from "react-icons/fa"
 
 function Appbar() {
   const { openSidebar } = useContext(AppContext);
@@ -19,21 +20,12 @@ function Appbar() {
       </span>
       <div className="pr-5 flex">
         <div className="p-3">
-          {theme === "dark" ? (
+         
             <span
               onClick={handleThemeChange}
               className="text-[#1a73e8] flex justify-center items-center  rounded-full w-10 h-10 hover:bg-slate-600/10  dark:hover:bg-gray-50/20"
-            >
-              <ion-icon name="sunny"></ion-icon>
+            > {theme === "dark" ? (<ion-icon name="sunny"></ion-icon>) : (<FaMoon />) }      
             </span>
-          ) : (
-            <span
-              onClick={handleThemeChange}
-              className="text-[#1a73e8] flex justify-center items-center rounded-full w-10 h-10 hover:bg-slate-600/10  dark:hover:bg-gray-50/20"
-            >
-              <ion-icon name="moon"></ion-icon>
-            </span>
-          )}
         </div>
         <span
           onClick={openSidebar}

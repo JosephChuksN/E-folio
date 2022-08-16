@@ -9,11 +9,12 @@ function EditEducation({details, educationData, setEducationData, showModal}){
 
     const [institution, setInstitution] = useState(details.institution)
     const [Degree, setDegree] = useState(details.Degree)
+    const [certification, setCertification] = useState(details.certification)
     const [startDate, setStartDate] = useState(details.startDate)
     const [endDate, setEndDate] = useState(details.endDate)
 
     
-    const editedEducation = {id, institution, Degree, startDate, endDate}
+    const editedEducation = {id, institution, Degree, certification, startDate, endDate}
 
   const editEducation = (id, editedEducation) => {
    setEducationData(educationData.map(details => (details.id === id ? editedEducation : details)))
@@ -54,12 +55,25 @@ function EditEducation({details, educationData, setEducationData, showModal}){
     />
 
  </div>
+ <div  className='flex flex-col'>
+
+    <label htmlFor="" className='text-xl'>Certification</label>
+    <input className='rounded-md border-gray-900/20  dark:border-slate-50/20  dark:bg-[#0c0f11] '
+    type="text"
+    name="certication" 
+    value={certification}
+    onChange={(e) => setCertification(e.target.value)}
+    required
+    
+    />
+
+ </div>
  <div className='flex justify-between items-center'>
  <div  className='flex flex-col'>
 
     <label htmlFor="" className='text-xl'>Start Date</label>
     <input  className='rounded-md w-40  border-gray-900/20  dark:border-slate-50/20  dark:bg-[#0c0f11] '
-    type="month" 
+    type="date" 
     name="startDate"
     value={startDate}
     onChange={(e) => setStartDate(e.target.value.toUpperCase())}
@@ -73,7 +87,7 @@ function EditEducation({details, educationData, setEducationData, showModal}){
 
     <label htmlFor="" className='text-xl'>End Date</label>
     <input  className='rounded-md w-40   border-gray-900/20  dark:border-slate-50/20  dark:bg-[#0c0f11] '
-    type="month" 
+    type="date" 
     name="endDate"
     value={endDate}
     onChange={(e) => setEndDate(e.target.value.toUpperCase())}
