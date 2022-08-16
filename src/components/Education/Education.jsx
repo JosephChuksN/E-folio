@@ -11,7 +11,7 @@ const [showModal, setShowModal] = useState(false);
  return(
 <>
 
-<div className='lg:mt-[7.5rem]  '>
+<div className='lg:mt-[7.5rem] h-screen  '>
 <div className='lg:pt-6 pt-36'>
    <h1 className="pl-3 text-5xl lg:mb-18 mb-20 ">Education</h1>
   <button
