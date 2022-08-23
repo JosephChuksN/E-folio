@@ -1,6 +1,8 @@
 import { React, useContext, useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import SideBarContext from "../Context/SideBarContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faUser, faAddressCard, faGraduationCap, faBriefcase, faUserGear, faGear, } from "@fortawesome/free-solid-svg-icons"
 
 function Sidebar() {
 const sideBar = useRef(null)
@@ -21,14 +23,14 @@ const activelink = "lg:font-extrabold lg:border-l-4 lg:border-[#1a73e8] text-[#1
   
 
 const sideBarItems = [
-{id: 1,  name: "Profile",  icon: "person-circle-outline",  link: "/", },
+{id: 1,  name: "Profile",  icon:faUser,  link: "/", },
          
 ];
 const sideBarItemsSub = [
-{id: 1, name: "About", icon: "information-circle-outline", link: "/About", },
-{id: 2, name: "Education", icon: "school",  link: "/Education",   },
-{id: 3, name: "Experience", icon: "briefcase", link: "/experience",  },
-{id: 4, name: "Skills", icon: "cog", link: "/skills",  },
+{id: 1, name: "About", icon:faAddressCard, link: "/About", },
+{id: 2, name: "Education", icon:faGraduationCap,  link: "/Education",   },
+{id: 3, name: "Experience", icon:faBriefcase, link: "/experience",  },
+{id: 4, name: "Skills", icon:faUserGear, link: "/skills",  },
       
 ];
 
@@ -40,10 +42,10 @@ return (
   >
 
 <div className=" h-screen  ">
-     <span>
-     <h1 className="text-gray-900 font-bold dark:text-gray-100 text-2xl p-2 ">
+     <span className="">
+     <h1 className="dark:text-white font-bold text-[#1a73e8] text-3xl p-2 lg:pb-5">
            
-         OnlineCv
+     E-folio
 
      </h1>
      </span>
@@ -64,9 +66,9 @@ return (
     className={({ isActive }) => (isActive ? activelink : null)}>
      
     <li  onClick={closeSidebar}   key={`${lists.id}_{lists.name}`}  className="flex dark:hover:bg-[#ffffff0f] hover:bg-slate-600/10   text-xl p-3"  >
-    <span className="mr-4 text-2xl">
+    <span className="mr-4 text-xl">
 
-          <ion-icon name={lists.icon}></ion-icon>
+          <FontAwesomeIcon icon={lists.icon} />
 
     </span>
     {lists.name}
@@ -86,9 +88,9 @@ return (
     <NavLink key={lists.id} to={lists.link}  className={({ isActive }) => (  isActive ? activelink : null) }>
              
     <li  onClick={closeSidebar}  key={`${lists.id}_{lists.name}`} className=" dark:hover:bg-[#ffffff0f] flex hover:bg-slate-600/10     focus:text-sky-300 text-xl p-3">
-    <span className="mr-4 text-2xl ">
+    <span className="mr-4 text-xl ">
 
-          <ion-icon name={lists.icon}></ion-icon>
+    <FontAwesomeIcon icon={lists.icon} />
     </span>
     {lists.name}
     </li>
@@ -100,9 +102,9 @@ return (
 <ul className="mx-2 flex flex-col mt-2">
    <NavLink to="/settings" className={({ isActive }) => ( isActive ? activelink : null)}>
    <li  onClick={closeSidebar}  className=" dark:hover:bg-[#ffffff0f]  flex hover:bg-slate-600/10    focus:text-sky-300 text-xl p-3">
-    <span className="mr-4 text-2xl ">
+    <span className="mr-4 text-xl ">
 
-          <ion-icon name="settings"></ion-icon>
+    <FontAwesomeIcon icon={faGear} />
     </span>
    Settings
     </li>
