@@ -15,7 +15,7 @@ return(
   <div className="pt-36 h-screen">
   
   <h1 className="pl-3 text-5xl mb-20">Skills</h1>
-  <div className='mt-24 lg:mt-0 text-gray-100 '>
+  <div className='mt-24 lg:mt-0 text-gray-100 md:mx-14 lg:mx-0'>
     <AddSkill 
      skills={props.skills}
      setSkills={props.setSkills}

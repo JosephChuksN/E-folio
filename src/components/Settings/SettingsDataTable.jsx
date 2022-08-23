@@ -34,7 +34,7 @@ return(
   
 <div className="mx-auto ">
     <div className=" text-5xl">
-    <span onClick={()=> upLoadInput.current.click()} className="absolute opacity-80 p-3 w-18 h-18 rounded-full bg-black/[0.75] lg:top-24 text-white lg:right-[22rem] top-24 right-40  z-20 "><FaCamera /></span>
+    <span onClick={()=> upLoadInput.current.click()} className="absolute opacity-80 p-3 w-18 h-18 rounded-full bg-black/[0.75] lg:top-24 text-white lg:right-[22rem] top-24 right-40  z-20 md:right-[22rem] "><FaCamera /></span>
     <input className="hidden"
     type="file" 
     name="" 

@@ -2,7 +2,7 @@ import { React, useContext, useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import SideBarContext from "../Context/SideBarContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faUser, faAddressCard, faGraduationCap, faBriefcase, faUserGear, faGear, } from "@fortawesome/free-solid-svg-icons"
+import {faUser, faAddressCard, faGraduationCap, faBriefcase, faUserGear, faGear, faXmark } from "@fortawesome/free-solid-svg-icons"
 
 function Sidebar() {
 const sideBar = useRef(null)
@@ -17,7 +17,7 @@ const handleOutsideClick = (e) =>{
 useEffect(()=>{
     document.addEventListener("mousedown", handleOutsideClick)
     return ()=>{document.removeEventListener("mousedown", handleOutsideClick)}
-}, [])
+})
 
 const activelink = "lg:font-extrabold lg:border-l-4 lg:border-[#1a73e8] text-[#1a73e8]"
   
@@ -51,11 +51,11 @@ return (
      </span>
 
      <span
-     className="text-gray-900 dark:text-gray-100  text-2xl absolute right-2 top-0.5 lg:hidden "
+     className="text-gray-900 dark:text-gray-100  text-2xl absolute right-2 top-2.5 lg:hidden "
      onClick={closeSidebar}
      >
 
-          <ion-icon name="close"></ion-icon>
+      <FontAwesomeIcon icon={faXmark} />
 
      </span>
 

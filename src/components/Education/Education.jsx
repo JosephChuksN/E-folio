@@ -15,14 +15,14 @@ const [showModal, setShowModal] = useState(false);
 <div className='lg:pt-6 pt-36'>
    <h1 className="pl-3 text-5xl lg:mb-18 mb-20 ">Education</h1>
   <button
-        className="bg-[#1a73e8] hover:bg-blue-800  active:bg-emerald-800  absolute lg:right-80 lg:top-56 top-60 right-2  text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+        className="bg-[#1a73e8] hover:bg-blue-800  active:bg-emerald-800  absolute lg:right-80 lg:top-56 top-60 right-2 md:right-16  text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
         type="button"
         onClick={() => setShowModal(true)}
       >
       New
   </button>
 </div>
-<div className='mt-24 lg:mt-0 text-gray-100 lg:w-3/4'>{
+<div className='mt-24 lg:mt-0 text-gray-100 lg:w-3/4 md:mx-14 lg:mx-0'>{
     props.educationData.map(data => {
         return(
         <div className='p-3  ' key={data.id}>
