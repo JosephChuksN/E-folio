@@ -23,7 +23,7 @@ function Appbar() {
          
             <span
               onClick={handleThemeChange}
-              className="text-[#1a73e8] flex justify-center items-center  rounded-full w-10 h-10 hover:bg-slate-600/10  dark:hover:bg-gray-50/20"
+              className="text-[#1a73e8] flex justify-center items-center cursor-pointer  rounded-full w-10 h-10 hover:bg-slate-600/10  dark:hover:bg-gray-50/20"
             > {theme === "dark" ? (<ion-icon name="sunny"></ion-icon>) : (<FaMoon />) }      
             </span>
         </div>

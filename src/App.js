@@ -36,7 +36,7 @@ const App= () => {
     
     <Sidebar />
     
-    <div className='lg:w-[80%] lg:ml-[307px]'>
+    <div className='lg:w-[80%] lg:ml-[205px]  xl:ml-[250px] 2xl:ml-[307px]'>
      <Appbar />
      
     <main className=' z-10'>

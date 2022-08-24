@@ -49,7 +49,7 @@ return(
       <h1  className="text-2xl mb-3 font-bold">External Links</h1>
       <span className="flex flex-col p-1 bg-slate-600/30 dark:bg-[#1e293b]  border-slate-50/20 border rounded-md">
                             
-      <p className="pt-5 flex items-center gap-2 text-blue-700 dark:text-sky-400">Portfolio <FontAwesomeIcon icon={faLink} /></p>
+      <p className="pt-5 flex items-center gap-2 text-blue-700 cursor-pointer dark:text-sky-400">Portfolio <FontAwesomeIcon icon={faLink} /></p>
       <span className="pt-5 flex items-center text-[#1a73e8]"><a href=" " target="_blank" rel="noreferrer" >{`onlinecv.org/in/${props.user.firstName.toLowerCase()}${props.user.lastName.toLowerCase()}`} <FontAwesomeIcon icon={faLink} /></a></span>
       </span>
 
