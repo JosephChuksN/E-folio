@@ -106,7 +106,7 @@ return(
     <div className=" grid lg:grid-cols-4 grid-cols-3 gap-3 items-center text-center">
      {
           props.skills.map((data, index) =>(
-               <span key={data.id} className="p-2 bg-[#1a73e8] rounded">{data.skill}</span>
+               <span key={data.id} className="p-2   dark:border-2 dark:border-slate-400/20 bg-slate-600/20 dark:bg-transparent rounded-lg font-semibold">{data.skill}</span>
           ))
    
 

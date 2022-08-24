@@ -62,21 +62,21 @@ const ContactInfo = ({setShow, user}) => {
 <div className="relative  lg:p-6 p-4 flex flex-col gap-5">
         <span className="text-2xl">Contact Info</span>
         <div className="flex gap-5">
-                <span className="pr-2 pt-1 pl-1 text-xl"><FaUser /></span>
+                <span className="pr-2 pt-1 pl-1 text-xl text-slate-600/40 dark:text-gray-100 "><FaUser /></span>
                 <div className="flex flex-col">
                     <span>Profile link</span>
                     <span className="text-[#1a73e8]"><a href={`${user.firstName}${user.lastName}.onlinecv.org`}>{`onlinecv.org/in/${user.firstName.toLowerCase()}${user.lastName.toLowerCase()}`}</a></span>
                 </div>
             </div>
             <div className="flex gap-5">
-                <span className="pr-2 pt-1 pl-1 text-xl"><FaEnvelope /></span>
+                <span className="pr-2 pt-1 pl-1 text-xl text-slate-600/40 dark:text-gray-100 "><FaEnvelope /></span>
                 <div className="flex flex-col">
                     <span>Email</span>
                     <span className="text-[#1a73e8]"><a href="mailto:someone@example.com">{user.email}</a></span>
                 </div>
             </div>
             <div className="flex gap-5">
-                <span className="pr-2 pt-1 pl-1 text-xl"><FaBirthdayCake /></span>
+                <span className="pr-2 pt-1 pl-1 text-xl text-slate-600/40 dark:text-gray-100 "><FaBirthdayCake /></span>
                 <div className="flex flex-col">
                     <span>Birthday</span>
                     <span className="text-slate-400 ">November 9</span>
