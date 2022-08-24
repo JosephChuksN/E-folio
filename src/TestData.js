@@ -16,8 +16,8 @@ const AboutText = () => {
 
 const educationData = [
    { id: uuidv4(),
-    institution: "UNIMAID",
-    Degree: "ANATOMY",
+    institution: "UNSW",
+    Degree: "NETWORKING",
     certification: "Bsc.",
     startDate: "2019-05-11",
     endDate: "2020-05-22",
@@ -25,8 +25,8 @@ const educationData = [
   
   {
     id: uuidv4(),
-    institution: "UMUDIKE",
-    Degree: "BIOLOGY",
+    institution: "ETH ZURICH",
+    Degree: "DEVOPS",
     certification: "Hnd.",
     startDate: "2021-08-12",
     endDate: "2021-11-14",
