@@ -8,7 +8,6 @@ import Experience from './components/Experience/Experience'
 import Skills from './components/Skills/Skills'
 import Settings from './components/Settings/Settings'
 import { ThemeProvider } from './Context/ThemeContext'
-import { SideBarProvider } from './Context/SideBarContext';
 import Background from './components/Background'
 import { user, AboutTxt, educationData, experienceData, SkillsData } from './TestData'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -28,7 +27,6 @@ const App= () => {
 
   return (
     <ThemeProvider>
-    <SideBarProvider>
       <Background>
       
     <Router>
@@ -110,7 +108,6 @@ const App= () => {
   </div>
   </Router>
   </Background>
-  </SideBarProvider>
   </ThemeProvider>
   
   );

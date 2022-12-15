@@ -1,11 +1,11 @@
 import { React, useContext } from "react";
 import ThemeContext from "../Context/ThemeContext";
-import AppContext from "../Context/SideBarContext";
+import useSidebarControl from "../hooks/SidebarControl";
 import logo from "../assets/e-folio small.png"
 import {  FaMoon } from "react-icons/fa"
 
 function Appbar() {
-  const { openSidebar } = useContext(AppContext);
+  const { handleSidebar } = useSidebarControl()
   const { theme, setTheme } = useContext(ThemeContext)
 
   const handleThemeChange = () => {
@@ -27,7 +27,7 @@ function Appbar() {
             </span>
         </div>
         <span
-          onClick={openSidebar}
+          onClick={handleSidebar}
           className="p-3 text-2xl flex justify-center items-center lg:hidden text-gray-900 dark:text-gray-50"
         >
           <ion-icon name="menu"></ion-icon>

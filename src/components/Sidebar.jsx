@@ -1,17 +1,17 @@
-import { React, useContext, useRef, useEffect } from "react";
+import { React, useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import SideBarContext from "../Context/SideBarContext";
+import useSidebarControl from "../hooks/SidebarControl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Logo from "../assets/e-folio.png"
 import {faUser, faAddressCard, faGraduationCap, faBriefcase, faUserGear, faGear, faXmark } from "@fortawesome/free-solid-svg-icons"
 
 function Sidebar() {
 const sideBar = useRef(null)
-const { isSidebarOpen, closeSidebar,  setIsSidebarOpen } = useContext(SideBarContext);
+const {isSidebarOpen, handleSidebar} = useSidebarControl()
 
 const handleOutsideClick = (e) =>{
     if(sideBar.current && !sideBar.current.contains(e.target)){
-        setIsSidebarOpen(false)
+      handleSidebar()
     }
 }
 
@@ -49,7 +49,7 @@ return (
 
      <span
      className="text-gray-900 dark:text-gray-100  text-2xl absolute right-2 top-2.5 lg:hidden "
-     onClick={closeSidebar}
+     onClick={handleSidebar}
      >
 
       <FontAwesomeIcon icon={faXmark} />
@@ -62,7 +62,7 @@ return (
     <NavLink key={lists.id} to={lists.link}
     className={({ isActive }) => (isActive ? activelink : null)}>
      
-    <li  onClick={closeSidebar}   key={`${lists.id}_{lists.name}`}  className="flex dark:hover:bg-[#ffffff0f] hover:bg-slate-600/10 rounded-md lg:mx-5   text-xl p-3"  >
+    <li  onClick={handleSidebar}   key={`${lists.id}_{lists.name}`}  className="flex dark:hover:bg-[#ffffff0f] hover:bg-slate-600/10 rounded-md lg:mx-5   text-xl p-3"  >
     <span className="mr-4 text-xl">
 
           <FontAwesomeIcon icon={lists.icon} />
@@ -84,7 +84,7 @@ return (
     return (
     <NavLink key={lists.id} to={lists.link}  className={({ isActive }) => (  isActive ? activelink : null) }>
              
-    <li  onClick={closeSidebar}  key={`${lists.id}_{lists.name}`} className=" dark:hover:bg-[#ffffff0f] flex hover:bg-slate-600/10 rounded-md  lg:mx-5    focus:text-sky-300 text-xl p-3">
+    <li  onClick={handleSidebar}  key={`${lists.id}_{lists.name}`} className=" dark:hover:bg-[#ffffff0f] flex hover:bg-slate-600/10 rounded-md  lg:mx-5    focus:text-sky-300 text-xl p-3">
     <span className="mr-4 text-xl ">
 
     <FontAwesomeIcon icon={lists.icon} />
@@ -98,7 +98,7 @@ return (
 
 <ul className="mx-2 flex flex-col mt-2">
    <NavLink to="/settings" className={({ isActive }) => ( isActive ? activelink : null)}>
-   <li  onClick={closeSidebar}  className=" dark:hover:bg-[#ffffff0f]  flex hover:bg-slate-600/10 lg:mx-5  rounded-md   focus:text-sky-300 text-xl p-3">
+   <li  onClick={handleSidebar}  className=" dark:hover:bg-[#ffffff0f]  flex hover:bg-slate-600/10 lg:mx-5  rounded-md   focus:text-sky-300 text-xl p-3">
     <span className="mr-4 text-xl ">
 
     <FontAwesomeIcon icon={faGear} />

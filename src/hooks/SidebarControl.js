@@ -1,9 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 
 
-const SidebarControl = ()=>{
+const useSidebarControl = ()=>{
+
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+    const handleSidebar = ()=> setIsSidebarOpen(!isSidebarOpen)
+
+    return {isSidebarOpen, handleSidebar}
 
 }
 
-export default SidebarControl;
+export default useSidebarControl;
